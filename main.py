@@ -1,11 +1,10 @@
 
 # %%
-
 import random
-from sklearn import preprocessing
-from sklearn.datasets import load_iris
 import numpy as np
 import pandas as pd
+from sklearn import preprocessing
+from sklearn.datasets import load_iris
 from sklearn.discriminant_analysis import (LinearDiscriminantAnalysis,
                                            QuadraticDiscriminantAnalysis)
 from sklearn.ensemble import (AdaBoostClassifier, ExtraTreesClassifier,
@@ -13,13 +12,13 @@ from sklearn.ensemble import (AdaBoostClassifier, ExtraTreesClassifier,
 from sklearn.gaussian_process import GaussianProcessClassifier
 from sklearn.gaussian_process.kernels import RBF
 from sklearn.linear_model import LogisticRegression
+from sklearn.model_selection import cross_val_score
 from sklearn.naive_bayes import GaussianNB
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.neural_network import MLPClassifier
 from sklearn.svm import SVC
 from sklearn.tree import DecisionTreeClassifier
 from statsmodels.stats.outliers_influence import variance_inflation_factor
-from sklearn.model_selection import cross_val_score
 
 # %%
 
@@ -101,55 +100,59 @@ featureSelectionName = [
 
 
 def initialPopulation(df, count_of_populations):
-    print("start initial population")
     populations = []
     for chromosom in range(count_of_populations):
         populations.append(np.random.randint(2, size=len(df.columns)))
-    print("end initial population")
     return populations
 
 
 def fitnessEvaluation(estimator, df, populations, main_value_of_dataset):
-    print("start fitnes evaulation")
-    print(df)
     y = df[main_value_of_dataset]
     X = df[list(filter(lambda x: x != main_value_of_dataset, df.columns.tolist()))]
     score = []
     for chromosom in populations:
         score.append(-1.0 * np.mean(cross_val_score(estimator,
                                                     X.iloc[:, chromosom], y, cv=5, scoring="neg_mean_squared_error")))
-    print("end fitnes evaulation")
-    print(score)
-    return print(np.array(populations)[np.argsort(np.array(score)), :]), max(score)
+    return np.array(populations)[np.argsort(np.array(score)), :], max(score)
 
 
-def mutation(populations, chance_of_chromosome_mutation):
+def select(populations, df, count_of_best_chromosome_to_select, count_of_random_chromosome_to_select):
+    select_populations = []
+    for best_chromosom in range(count_of_best_chromosome_to_select):
+        select_populations.append(populations[best_chromosom])
+    for random_chromosom in range(count_of_random_chromosome_to_select):
+        select_populations.append(np.random.randint(2, size=len(df.columns)))
+    return select_populations
+
+
+def mutation(default_populations, chance_of_chromosome_mutation):
+    populations = default_populations.copy()
     mutation_populations = []
     for chromosom in populations:
-        test_chromosom = chromosom.copy
         if random.random() < chance_of_chromosome_mutation:
-            for i int range(len(test_chromosom)):
+            for i in range(len(chromosom)):
                 if random.random() < 0.5:
-                    test_chromosom[i] = 1 - test_chromosom[i]
-        mutation_populations.append(test_chromosom)
+                    chromosom[i] = 1 - chromosom[i]
+        mutation_populations.append(chromosom)
     return mutation_populations
 
 
-def crossOver(populations):
+def crossOver(default_populations, count_of_children_to_crossover):
+    populations = default_populations.copy()
     crossover_populations = []
-    for chromosom in populations:
-
-
-def selection(estimator, df, populations, main_value_of_dataset, maxScore, chance_of_chromosome_mutation):
-    orderPopulations, actualMaxScore = fitnessEvaluation(
-        estimator, df, populations, main_value_of_dataset)
-    if maxScore < actualMaxScore:
-        maxChromosom = orderPopulations[0]
-        maxScore = actualMaxScore
-    print(maxScore)
-    crossOver(orderPopulations)
-    mutation(orderPopulations, chance_of_chromosome_mutation)
-    return maxScore, maxChromosom, populations
+    count = count_of_children_to_crossover
+    if count_of_children_to_crossover > len(populations)//2:
+        count = len(populations)//2
+    for i in range(count):
+        child, chromosom = populations[i], populations[len(populations)-1-i]
+        change = False
+        for j in range(len(child)):
+            if change == False and random.random() < 0.5:
+                change = True
+            if change == True:
+                child[j] = chromosom[j]
+        crossover_populations.append(child)
+    return crossover_populations
 
 
 def gaSelectFeatures(estimator, df, count_populations, count_of_generations, count_of_children_to_crossover, count_of_best_chromosome_to_select, count_of_random_chromosome_to_select, chance_of_chromosome_mutation, main_value_of_dataset):
@@ -157,8 +160,20 @@ def gaSelectFeatures(estimator, df, count_populations, count_of_generations, cou
     maxScore = 0
     maxChromosom = []
     for actualGenerations in range(count_of_generations):
-        maxScore, maxChromosom, populations = selection(
-            estimator, df, populations, main_value_of_dataset, maxScore, chance_of_chromosome_mutation)
+        orderPopulations, actualMaxScore = fitnessEvaluation(
+            estimator, df, populations, main_value_of_dataset)
+        if maxScore < actualMaxScore:
+            maxChromosom = orderPopulations[0]
+            maxScore = actualMaxScore
+        print(maxChromosom)
+        print(maxScore)
+        new_populations = select(
+            orderPopulations, df, count_of_best_chromosome_to_select, count_of_random_chromosome_to_select)
+        new_populations_witht_select = np.concatenate((new_populations, crossOver(
+            orderPopulations, count_of_children_to_crossover)))
+        new_populations_with_crossOver = np.concatenate((new_populations_witht_select, mutation(
+            orderPopulations, chance_of_chromosome_mutation)))
+    return maxChromosom
 
 
 # %%
@@ -179,7 +194,7 @@ print(test_dataframe.head())
 
 model = estimatorFunction[0]
 count_of_populations = 5
-count_of_generations = 1
+count_of_generations = 5
 count_of_children_to_crossover = 2
 count_of_best_chromosome_to_select = 2
 count_of_random_chromosome_to_select = 2
@@ -197,103 +212,6 @@ gaSelectFeatures(
     chance_of_chromosome_mutation,
     main_value_of_dataset
 )
-
-
-# %%
-
-
-# %%
-
-xp = []
-
-xp.append(np.array([3, 2, 3]))
-xp.append(np.array([1, 3, 4]))
-xp.append(np.array([2, 3, 4]))
-xp.append(np.array([4, 3, 4]))
-xp.append(np.array([5, 3, 4]))
-
-xx = np.array([8, 5, 7, 10, 13])
-x = np.array([3, 1, 2, 4, 5])
-print(x)
-print(np.argsort(x))
-print(x[np.argsort(x)])
-print(xx[np.argsort(x)])
-ssss = np.array(xp)
-ssss[np.argsort(x), :]
-
-print(list(np.array(xp)[np.argsort(x), :]))
-
-
-# %%
-# X,y = test_dataframe.data, test_dataframe.target
-
-main_value_of_dataset = 'sepal_length'
-y = test_dataframe[main_value_of_dataset]
-X = test_dataframe[list(
-    filter(lambda x: x != main_value_of_dataset, test_dataframe.columns.tolist()))]
-
-
-# %%
-print(X)
-print(y)
-print(test_dataframe)
-
-# %%
-# cross_val_score(estimatorFunction[7], X[:, [
-#                 0, 1, 1, 0]], y, cv=5, scoring="neg_mean_squared_error")
-
-# score.append( -1.0 * np.mean(cross_val_score( estimator, X[:,chromosom], y, cv=5, scoring="neg_mean_squared_error")))
-
-
-# %%
-print(X)
-print(X.iloc[:, [1, 1, 1]])
-print(X.iloc[:, [0, 1, 2]])
-
-
-# %%
-
-
-normalized_X = preprocessing.normalize(X)
-print(X["petal_length"].dtype)
-print(X.describe)
-print(normalized_X)
-
-
-# %%
-
-
-xx = np.array([8, 5, 7, 10, 13])
-xxx = xx.sort
-print(xxx.pop(0))
-
-# %%
-
-pp = []
-pp.append(140)
-
-pp.append(20)
-
-pp.append(30)
-print(max(pp))
-# print(pp[0])
-
-# %%
-print(random.random())
-print(random.random())
-print(random.random())
-print(random.random())
-print(random.random())
-print(random.random())
-print(random.random())
-print(random.random())
-print(random.random())
-print(random.random())
-print(random.random())
-print(random.random())
-print(random.random())
-print(random.random())
-print(random.random())
 
 
 # %%
