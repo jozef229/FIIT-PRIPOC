@@ -1,7 +1,7 @@
 
 # %%
 
-
+import random
 from sklearn import preprocessing
 from sklearn.datasets import load_iris
 import numpy as np
@@ -123,23 +123,32 @@ def fitnessEvaluation(estimator, df, populations, main_value_of_dataset):
     return print(np.array(populations)[np.argsort(np.array(score)), :]), max(score)
 
 
-def mutation():
-    print("mutation")
+def mutation(populations, chance_of_chromosome_mutation):
+    mutation_populations = []
+    for chromosom in populations:
+        test_chromosom = chromosom.copy
+        if random.random() < chance_of_chromosome_mutation:
+            for i int range(len(test_chromosom)):
+                if random.random() < 0.5:
+                    test_chromosom[i] = 1 - test_chromosom[i]
+        mutation_populations.append(test_chromosom)
+    return mutation_populations
 
 
-def crossOver():
-    print("crossOver")
+def crossOver(populations):
+    crossover_populations = []
+    for chromosom in populations:
 
 
-def selection(estimator, df, populations, main_value_of_dataset, maxScore):
+def selection(estimator, df, populations, main_value_of_dataset, maxScore, chance_of_chromosome_mutation):
     orderPopulations, actualMaxScore = fitnessEvaluation(
         estimator, df, populations, main_value_of_dataset)
     if maxScore < actualMaxScore:
         maxChromosom = orderPopulations[0]
         maxScore = actualMaxScore
     print(maxScore)
-    mutation(orderPopulations)
     crossOver(orderPopulations)
+    mutation(orderPopulations, chance_of_chromosome_mutation)
     return maxScore, maxChromosom, populations
 
 
@@ -149,7 +158,7 @@ def gaSelectFeatures(estimator, df, count_populations, count_of_generations, cou
     maxChromosom = []
     for actualGenerations in range(count_of_generations):
         maxScore, maxChromosom, populations = selection(
-            estimator, df, populations, main_value_of_dataset, maxScore)
+            estimator, df, populations, main_value_of_dataset, maxScore, chance_of_chromosome_mutation)
 
 
 # %%
@@ -268,5 +277,23 @@ pp.append(20)
 pp.append(30)
 print(max(pp))
 # print(pp[0])
+
+# %%
+print(random.random())
+print(random.random())
+print(random.random())
+print(random.random())
+print(random.random())
+print(random.random())
+print(random.random())
+print(random.random())
+print(random.random())
+print(random.random())
+print(random.random())
+print(random.random())
+print(random.random())
+print(random.random())
+print(random.random())
+
 
 # %%
