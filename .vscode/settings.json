@@ -1,3 +1,7 @@
 {
-    "python.pythonPath": "/Users/jofy/anaconda3/bin/python"
+    "python.pythonPath": "/Users/jofy/anaconda3/bin/python",
+    "python.linting.pylintEnabled": false,
+    "python.linting.pydocstyleEnabled": false,
+    "python.linting.enabled": false,
+    "python.linting.pycodestyleEnabled": true
 }

@@ -2,6 +2,8 @@
 # %%
 
 
+from sklearn import preprocessing
+from sklearn.datasets import load_iris
 import numpy as np
 import pandas as pd
 from sklearn.discriminant_analysis import (LinearDiscriminantAnalysis,
@@ -17,6 +19,7 @@ from sklearn.neural_network import MLPClassifier
 from sklearn.svm import SVC
 from sklearn.tree import DecisionTreeClassifier
 from statsmodels.stats.outliers_influence import variance_inflation_factor
+from sklearn.model_selection import cross_val_score
 
 # %%
 
@@ -52,7 +55,7 @@ def vifSelectFeatures(dataset, thresh=100.0):
     return dataset_out
 
 
-classifiers = [
+estimatorFunction = [
     AdaBoostClassifier(),
     DecisionTreeClassifier(max_depth=5),
     ExtraTreesClassifier(n_estimators=5, criterion="entropy", max_features=2),
@@ -72,7 +75,7 @@ classifiers = [
 ]
 
 
-classifiersNames = [
+estimatorNames = [
     "AdaBoost",
     "Decision Tree",
     "Extra Trees",
@@ -97,27 +100,27 @@ featureSelectionName = [
 ]
 
 
-def initialPopulation(df, count_populations):
+def initialPopulation(df, count_of_populations):
     print("start initial population")
     populations = []
-    for chromosom in range(count_populations):
+    for chromosom in range(count_of_populations):
         populations.append(np.random.randint(2, size=len(df.columns)))
     print("end initial population")
     return populations
 
 
-def fitnessEvaluation():
-    print("fitnes evaulation")
-
-
-def reproduction():
-    print("reproduction")
-
-
-def selection():
-    print("selection:")
-    fitnessEvaluation()
-    reproduction()
+def fitnessEvaluation(estimator, df, populations, main_value_of_dataset):
+    print("start fitnes evaulation")
+    print(df)
+    y = df[main_value_of_dataset]
+    X = df[list(filter(lambda x: x != main_value_of_dataset, df.columns.tolist()))]
+    score = []
+    for chromosom in populations:
+        score.append(-1.0 * np.mean(cross_val_score(estimator,
+                                                    X.iloc[:, chromosom], y, cv=5, scoring="neg_mean_squared_error")))
+    print("end fitnes evaulation")
+    print(score)
+    return print(np.array(populations)[np.argsort(np.array(score)), :])
 
 
 def mutation():
@@ -128,20 +131,22 @@ def crossOver():
     print("crossOver")
 
 
+def selection(estimator, df, populations, main_value_of_dataset):
+    orderPopulations = fitnessEvaluation(
+        estimator, df, populations, main_value_of_dataset)
+    geneticOperations()
+
+
 def geneticOperations():
     print("genetic operation:")
     mutation()
     crossOver()
 
 
-def gaSelectFeatures(df, count_populations, count_generations):
-    print("startGA")
-    population = initialPopulation(df, count_populations)
-    print(population)
-    for actualGenerations in range(count_generations):
-        print(actualGenerations)
-        selection()
-        geneticOperations()
+def gaSelectFeatures(estimator, df, count_populations, count_of_generations, count_of_children_to_crossover, count_of_best_chromosome_to_select, count_of_random_chromosome_to_select, chance_of_chromosome_mutation, main_value_of_dataset):
+    populations = initialPopulation(df, count_populations)
+    for actualGenerations in range(count_of_generations):
+        selection(estimator, df, populations, main_value_of_dataset)
 
 
 # %%
@@ -153,17 +158,94 @@ test_dataframe = test_dataframe.replace("virginica", 3)
 test_dataframe = test_dataframe.replace("versicolor", 2)
 test_dataframe = test_dataframe.replace("setosa", 1)
 test_dataframe["species"] = test_dataframe["species"].astype(int)
+print(test_dataframe)
+test_dataframe = test_dataframe * 100
+test_dataframe = test_dataframe.astype(int, errors='ignore')
 print(test_dataframe.head())
 
 # %%
 
-count_of_generations = 5
+model = estimatorFunction[0]
 count_of_populations = 5
+count_of_generations = 1
+count_of_children_to_crossover = 2
+count_of_best_chromosome_to_select = 2
+count_of_random_chromosome_to_select = 2
+chance_of_chromosome_mutation = 0.5
+main_value_of_dataset = 'sepal_length'
+
 gaSelectFeatures(
+    model,
     test_dataframe,
     count_of_populations,
-    count_of_generations
+    count_of_generations,
+    count_of_children_to_crossover,
+    count_of_best_chromosome_to_select,
+    count_of_random_chromosome_to_select,
+    chance_of_chromosome_mutation,
+    main_value_of_dataset
 )
+
+
+# %%
+
+
+# %%
+
+xp = []
+
+xp.append(np.array([3, 2, 3]))
+xp.append(np.array([1, 3, 4]))
+xp.append(np.array([2, 3, 4]))
+xp.append(np.array([4, 3, 4]))
+xp.append(np.array([5, 3, 4]))
+
+xx = np.array([8, 5, 7, 10, 13])
+x = np.array([3, 1, 2, 4, 5])
+print(x)
+print(np.argsort(x))
+print(x[np.argsort(x)])
+print(xx[np.argsort(x)])
+ssss = np.array(xp)
+ssss[np.argsort(x), :]
+
+print(list(np.array(xp)[np.argsort(x), :]))
+
+
+# %%
+# X,y = test_dataframe.data, test_dataframe.target
+
+main_value_of_dataset = 'sepal_length'
+y = test_dataframe[main_value_of_dataset]
+X = test_dataframe[list(
+    filter(lambda x: x != main_value_of_dataset, test_dataframe.columns.tolist()))]
+
+
+# %%
+print(X)
+print(y)
+print(test_dataframe)
+
+# %%
+cross_val_score(estimatorFunction[7], X[:, [
+                0, 1, 1, 0]], y, cv=5, scoring="neg_mean_squared_error")
+
+# score.append( -1.0 * np.mean(cross_val_score( estimator, X[:,chromosom], y, cv=5, scoring="neg_mean_squared_error")))
+
+
+# %%
+print(X)
+print(X.iloc[:, [1, 1, 1]])
+print(X.iloc[:, [0, 1, 2]])
+
+
+# %%
+
+
+normalized_X = preprocessing.normalize(X)
+print(X["petal_length"].dtype)
+print(X.describe)
+print(normalized_X)
 
 
 # %%
