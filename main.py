@@ -1,5 +1,6 @@
 
 # %%
+import time
 import random
 import numpy as np
 import pandas as pd
@@ -102,7 +103,7 @@ featureSelectionName = [
 def initialPopulation(df, count_of_populations):
     populations = []
     for chromosom in range(count_of_populations):
-        populations.append(np.random.randint(2, size=len(df.columns)))
+        populations.append(np.random.randint(2, size=len(df.columns)-1))
     return populations
 
 
@@ -121,7 +122,7 @@ def select(populations, df, count_of_best_chromosome_to_select, count_of_random_
     for best_chromosom in range(count_of_best_chromosome_to_select):
         select_populations.append(populations[best_chromosom])
     for random_chromosom in range(count_of_random_chromosome_to_select):
-        select_populations.append(np.random.randint(2, size=len(df.columns)))
+        select_populations.append(np.random.randint(2, size=len(df.columns)-1))
     return select_populations
 
 
@@ -160,6 +161,7 @@ def gaSelectFeatures(estimator, df, count_populations, count_of_generations, cou
     maxScore = 0
     maxChromosom = []
     for actualGenerations in range(count_of_generations):
+        start = time.time()
         orderPopulations, actualMaxScore = fitnessEvaluation(
             estimator, df, populations, main_value_of_dataset)
         if maxScore < actualMaxScore:
@@ -167,12 +169,26 @@ def gaSelectFeatures(estimator, df, count_populations, count_of_generations, cou
             maxScore = actualMaxScore
         print(maxChromosom)
         print(maxScore)
+        end = time.time()
+        print(end - start)
+
+        start = time.time()
         new_populations = select(
             orderPopulations, df, count_of_best_chromosome_to_select, count_of_random_chromosome_to_select)
+        end = time.time()
+        print(end - start)
+
+        start = time.time()
         new_populations_witht_select = np.concatenate((new_populations, crossOver(
             orderPopulations, count_of_children_to_crossover)))
+        end = time.time()
+        print(end - start)
+
+        start = time.time()
         new_populations_with_crossOver = np.concatenate((new_populations_witht_select, mutation(
             orderPopulations, chance_of_chromosome_mutation)))
+        end = time.time()
+        print(end - start)
     return maxChromosom
 
 
@@ -213,5 +229,13 @@ gaSelectFeatures(
     main_value_of_dataset
 )
 
+
+# %%
+
+
+start = time.time()
+print("hello")
+end = time.time()
+print(end - start)
 
 # %%
