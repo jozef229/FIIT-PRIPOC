@@ -120,7 +120,7 @@ def fitnessEvaluation(estimator, df, populations, main_value_of_dataset):
                                                     X.iloc[:, chromosom], y, cv=5, scoring="neg_mean_squared_error")))
     print("end fitnes evaulation")
     print(score)
-    return print(np.array(populations)[np.argsort(np.array(score)), :])
+    return print(np.array(populations)[np.argsort(np.array(score)), :]), max(score)
 
 
 def mutation():
@@ -131,22 +131,25 @@ def crossOver():
     print("crossOver")
 
 
-def selection(estimator, df, populations, main_value_of_dataset):
-    orderPopulations = fitnessEvaluation(
+def selection(estimator, df, populations, main_value_of_dataset, maxScore):
+    orderPopulations, actualMaxScore = fitnessEvaluation(
         estimator, df, populations, main_value_of_dataset)
-    geneticOperations()
-
-
-def geneticOperations():
-    print("genetic operation:")
-    mutation()
-    crossOver()
+    if maxScore < actualMaxScore:
+        maxChromosom = orderPopulations[0]
+        maxScore = actualMaxScore
+    print(maxScore)
+    mutation(orderPopulations)
+    crossOver(orderPopulations)
+    return maxScore, maxChromosom, populations
 
 
 def gaSelectFeatures(estimator, df, count_populations, count_of_generations, count_of_children_to_crossover, count_of_best_chromosome_to_select, count_of_random_chromosome_to_select, chance_of_chromosome_mutation, main_value_of_dataset):
     populations = initialPopulation(df, count_populations)
+    maxScore = 0
+    maxChromosom = []
     for actualGenerations in range(count_of_generations):
-        selection(estimator, df, populations, main_value_of_dataset)
+        maxScore, maxChromosom, populations = selection(
+            estimator, df, populations, main_value_of_dataset, maxScore)
 
 
 # %%
@@ -227,8 +230,8 @@ print(y)
 print(test_dataframe)
 
 # %%
-cross_val_score(estimatorFunction[7], X[:, [
-                0, 1, 1, 0]], y, cv=5, scoring="neg_mean_squared_error")
+# cross_val_score(estimatorFunction[7], X[:, [
+#                 0, 1, 1, 0]], y, cv=5, scoring="neg_mean_squared_error")
 
 # score.append( -1.0 * np.mean(cross_val_score( estimator, X[:,chromosom], y, cv=5, scoring="neg_mean_squared_error")))
 
@@ -247,5 +250,23 @@ print(X["petal_length"].dtype)
 print(X.describe)
 print(normalized_X)
 
+
+# %%
+
+
+xx = np.array([8, 5, 7, 10, 13])
+xxx = xx.sort
+print(xxx.pop(0))
+
+# %%
+
+pp = []
+pp.append(140)
+
+pp.append(20)
+
+pp.append(30)
+print(max(pp))
+# print(pp[0])
 
 # %%
