@@ -1,9 +1,11 @@
-
 # %%
-import time
 import random
+from statistics import mean
+
+import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
+import seaborn as sns
 from sklearn import preprocessing
 from sklearn.datasets import load_iris
 from sklearn.discriminant_analysis import (LinearDiscriminantAnalysis,
@@ -96,7 +98,8 @@ estimatorNames = [
 featureSelectionName = [
     "cor",
     "vif",
-    "ga"
+    "ga",
+    "none"
 ]
 
 
@@ -114,16 +117,13 @@ def fitnessEvaluation(estimator, df, populations, main_value_of_dataset):
     for chromosom in populations:
         score.append(-1.0 * np.mean(cross_val_score(estimator,
                                                     X.iloc[:, chromosom], y, cv=5, scoring="neg_mean_squared_error")))
-    return np.array(populations)[np.argsort(np.array(score)), :], max(score)
+    return np.array(populations)[np.argsort(np.array(score)), :], max(score), mean(score)
 
 
 def select(populations, df, count_of_best_chromosome_to_select, count_of_random_chromosome_to_select):
-    select_populations = []
-    for best_chromosom in range(count_of_best_chromosome_to_select):
-        select_populations.append(populations[best_chromosom])
     for random_chromosom in range(count_of_random_chromosome_to_select):
-        select_populations.append(np.random.randint(2, size=len(df.columns)-1))
-    return select_populations
+        populations[count_of_best_chromosome_to_select +
+                    random_chromosom] = np.random.randint(2, size=len(df.columns)-1)
 
 
 def mutation(default_populations, chance_of_chromosome_mutation):
@@ -138,8 +138,8 @@ def mutation(default_populations, chance_of_chromosome_mutation):
     return mutation_populations
 
 
-def crossOver(default_populations, count_of_children_to_crossover):
-    populations = default_populations.copy()
+def crossOver(populations, count_of_children_to_crossover):
+    populations
     crossover_populations = []
     count = count_of_children_to_crossover
     if count_of_children_to_crossover > len(populations)//2:
@@ -151,45 +151,38 @@ def crossOver(default_populations, count_of_children_to_crossover):
             if change == False and random.random() < 0.5:
                 change = True
             if change == True:
-                child[j] = chromosom[j]
-        crossover_populations.append(child)
-    return crossover_populations
+                chromosom[j] = child[j]
+
+
+def plotScores(max_score, average_score):
+    plt.plot(max_score, label='Max score')
+    plt.plot(average_score, label='Average score')
+    plt.legend()
+    plt.ylabel('Scores')
+    plt.xlabel('Generation')
+    plt.show()
 
 
 def gaSelectFeatures(estimator, df, count_populations, count_of_generations, count_of_children_to_crossover, count_of_best_chromosome_to_select, count_of_random_chromosome_to_select, chance_of_chromosome_mutation, main_value_of_dataset):
     populations = initialPopulation(df, count_populations)
     maxScore = 0
     maxChromosom = []
+    avgScoreArray = []
+    maxScoreArray = []
     for actualGenerations in range(count_of_generations):
-        start = time.time()
-        orderPopulations, actualMaxScore = fitnessEvaluation(
+        orderPopulations, actualMaxScore, actualAvgScore = fitnessEvaluation(
             estimator, df, populations, main_value_of_dataset)
+        maxScoreArray.append(actualMaxScore)
+        avgScoreArray.append(actualAvgScore)
         if maxScore < actualMaxScore:
             maxChromosom = orderPopulations[0]
             maxScore = actualMaxScore
-        print(maxChromosom)
-        print(maxScore)
-        end = time.time()
-        print(end - start)
-
-        start = time.time()
-        new_populations = select(
-            orderPopulations, df, count_of_best_chromosome_to_select, count_of_random_chromosome_to_select)
-        end = time.time()
-        print(end - start)
-
-        start = time.time()
-        new_populations_witht_select = np.concatenate((new_populations, crossOver(
-            orderPopulations, count_of_children_to_crossover)))
-        end = time.time()
-        print(end - start)
-
-        start = time.time()
-        new_populations_with_crossOver = np.concatenate((new_populations_witht_select, mutation(
-            orderPopulations, chance_of_chromosome_mutation)))
-        end = time.time()
-        print(end - start)
-    return maxChromosom
+        crossOver(orderPopulations, count_of_children_to_crossover)
+        select(orderPopulations, df, count_of_best_chromosome_to_select,
+               count_of_random_chromosome_to_select)
+        mutation(orderPopulations, chance_of_chromosome_mutation)
+    plotScores(maxScoreArray, avgScoreArray)
+    return pd.concat([df[main_value_of_dataset], X.iloc[:, maxChromosom]], axis=1, sort=False)
 
 
 # %%
@@ -201,10 +194,8 @@ test_dataframe = test_dataframe.replace("virginica", 3)
 test_dataframe = test_dataframe.replace("versicolor", 2)
 test_dataframe = test_dataframe.replace("setosa", 1)
 test_dataframe["species"] = test_dataframe["species"].astype(int)
-print(test_dataframe)
 test_dataframe = test_dataframe * 100
 test_dataframe = test_dataframe.astype(int, errors='ignore')
-print(test_dataframe.head())
 
 # %%
 
@@ -217,25 +208,54 @@ count_of_random_chromosome_to_select = 2
 chance_of_chromosome_mutation = 0.5
 main_value_of_dataset = 'sepal_length'
 
-gaSelectFeatures(
-    model,
-    test_dataframe,
-    count_of_populations,
-    count_of_generations,
-    count_of_children_to_crossover,
-    count_of_best_chromosome_to_select,
-    count_of_random_chromosome_to_select,
-    chance_of_chromosome_mutation,
-    main_value_of_dataset
-)
+# gaSelectFeatures(
+#     model,
+#     test_dataframe,
+#     count_of_populations,
+#     count_of_generations,
+#     count_of_children_to_crossover,
+#     count_of_best_chromosome_to_select,
+#     count_of_random_chromosome_to_select,
+#     chance_of_chromosome_mutation,
+#     main_value_of_dataset
+# )
 
 
-# %%
+df_stats_model = pd.DataFrame()
+for featureSelection in range(len(featureSelectionName)):
+    df_data = test_dataframe.copy()
+    if featureSelection == 0:
+        df_data = corrSelectFeatures(df_data)
+    if featureSelection == 1:
+        df_data = vifSelectFeatures(df_data)
+    if featureSelection == 2:
+        df_data = gaSelectFeatures(
+            model,
+            df_data,
+            count_of_populations,
+            count_of_generations,
+            count_of_children_to_crossover,
+            count_of_best_chromosome_to_select,
+            count_of_random_chromosome_to_select,
+            chance_of_chromosome_mutation,
+            main_value_of_dataset
+        )
+    for estimator in range(len(estimatorNames)):
+        df_test = df_data.copy()
+        y = test_dataframe[main_value_of_dataset]
+        X = df_test[list(
+            filter(lambda x: x != main_value_of_dataset, df_test.columns.tolist()))]
+        try:
+            df_stats_model = df_stats_model.append({
+                "Features Selecetion": featureSelectionName[featureSelection],
+                "Score": -1.0 * np.mean(cross_val_score(estimatorFunction[estimator], X, y, cv=5, scoring="neg_mean_squared_error")),
+                "model": estimatorNames[estimator]
+            }, ignore_index=True)
+            pass
+        except ValueError:
+            pass
 
+df_stats_model.to_csv(r'columns_stats_model.csv', index=False, header=True)
 
-start = time.time()
-print("hello")
-end = time.time()
-print(end - start)
 
 # %%
