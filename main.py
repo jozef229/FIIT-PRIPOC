@@ -1,4 +1,5 @@
 # %%
+import urllib.request
 import random
 from statistics import mean
 
@@ -170,6 +171,7 @@ def gaSelectFeatures(estimator, df, count_populations, count_of_generations, cou
     avgScoreArray = []
     maxScoreArray = []
     for actualGenerations in range(count_of_generations):
+        print(str(actualGenerations) + " -Generation")
         orderPopulations, actualMaxScore, actualAvgScore = fitnessEvaluation(
             estimator, df, populations, main_value_of_dataset)
         maxScoreArray.append(actualMaxScore)
@@ -186,27 +188,27 @@ def gaSelectFeatures(estimator, df, count_populations, count_of_generations, cou
 
 
 # %%
-test_dataframe = pd.read_csv(
-    "https://raw.githubusercontent.com/mwaskom/seaborn-data/master/iris.csv"
-)
-test_dataframe.describe()
-test_dataframe = test_dataframe.replace("virginica", 3)
-test_dataframe = test_dataframe.replace("versicolor", 2)
-test_dataframe = test_dataframe.replace("setosa", 1)
-test_dataframe["species"] = test_dataframe["species"].astype(int)
-test_dataframe = test_dataframe * 100
-test_dataframe = test_dataframe.astype(int, errors='ignore')
+
+# Set display
+pd.set_option("display.max_rows", None)
+pd.set_option("display.max_columns", None)
+pd.set_option("display.width", None)
+pd.set_option("display.max_colwidth", -1)
+
+# https://www.kaggle.com/iabhishekofficial/mobile-price-classification#train.csv
+test_dataframe = pd.read_csv('Dataset/train.csv')
+
 
 # %%
 
 model = estimatorFunction[0]
-count_of_populations = 5
-count_of_generations = 5
-count_of_children_to_crossover = 2
-count_of_best_chromosome_to_select = 2
-count_of_random_chromosome_to_select = 2
-chance_of_chromosome_mutation = 0.5
-main_value_of_dataset = 'sepal_length'
+count_of_populations = 100
+count_of_generations = 20
+count_of_children_to_crossover = 30
+count_of_best_chromosome_to_select = 30
+count_of_random_chromosome_to_select = 30
+chance_of_chromosome_mutation = 0.6
+main_value_of_dataset = 'price_range'
 
 # gaSelectFeatures(
 #     model,
@@ -224,6 +226,8 @@ main_value_of_dataset = 'sepal_length'
 df_stats_model = pd.DataFrame()
 for featureSelection in range(len(featureSelectionName)):
     df_data = test_dataframe.copy()
+    print()
+    print(str(featureSelection) + " FS from " + len(featureSelectionName))
     if featureSelection == 0:
         df_data = corrSelectFeatures(df_data)
     if featureSelection == 1:
@@ -241,6 +245,7 @@ for featureSelection in range(len(featureSelectionName)):
             main_value_of_dataset
         )
     for estimator in range(len(estimatorNames)):
+        print(str(estimator) + "Estimator" + len(estimatorNames))
         df_test = df_data.copy()
         y = test_dataframe[main_value_of_dataset]
         X = df_test[list(
@@ -256,6 +261,9 @@ for featureSelection in range(len(featureSelectionName)):
             pass
 
 df_stats_model.to_csv(r'columns_stats_model.csv', index=False, header=True)
+cm = sns.light_palette("green", as_cmap=True)
+styled = df_stats_model.style.background_gradient(cmap=cm)
+styled.to_excel('Documentation/styled_model.xlsx', engine='openpyxl')
 
 
 # %%

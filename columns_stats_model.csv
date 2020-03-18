@@ -1,49 +1,57 @@
 Features Selecetion,Score,model
-cor,2706.64939368551,AdaBoost
-cor,2351.003972278567,Decision Tree
-cor,1841.6423968162976,Extra Trees
-cor,1970.3275252079845,Naive Bayes
-cor,34358.80852073963,Gaussian Process
-cor,2141.6891414586826,Nearest Neighbors
-cor,4187.793262192433,Logistic Regression
-cor,3390.0736047417463,Neural Net
-cor,2530.883289237734,Random Forest
-cor,1761.910801584502,SVM Sigmoid
-cor,12753.116270541199,SVM Linear 
-cor,10286.764555589853,SVM RBF
-vif,2745.1381493076988,AdaBoost
-vif,2389.1540986859513,Decision Tree
-vif,1932.930023958609,Extra Trees
-vif,3346.6375128612162,Naive Bayes
-vif,43327.650946953,Gaussian Process
-vif,2371.9110775494605,Nearest Neighbors
-vif,3581.3858350236646,Logistic Regression
-vif,3320.18137585619,Neural Net
-vif,1919.2661775729782,Random Forest
-vif,1538.5115931005087,SVM Sigmoid
-vif,12753.116270541199,SVM Linear 
-vif,12389.573581224093,SVM RBF
-ga,2858.667561072405,AdaBoost
-ga,2261.4876304494815,Decision Tree
-ga,1765.3554531557752,Extra Trees
-ga,2151.5708281888465,Naive Bayes
-ga,34358.80852073963,Gaussian Process
-ga,2043.5013945233266,Nearest Neighbors
-ga,4187.793262192433,Logistic Regression
-ga,5168.465973630831,Neural Net
-ga,2087.6770221506895,Random Forest
-ga,1650.381150233707,SVM Sigmoid
-ga,12753.116270541199,SVM Linear 
-ga,10286.764555589853,SVM RBF
-none,2740.4424971337858,AdaBoost
-none,2420.5131250551194,Decision Tree
-none,2191.485184981039,Extra Trees
-none,3346.6375128612162,Naive Bayes
-none,43327.650946953,Gaussian Process
-none,2371.9110775494605,Nearest Neighbors
-none,3570.3513522650437,Logistic Regression
-none,4142.826470588235,Neural Net
-none,2940.5490570891025,Random Forest
-none,1538.5115931005087,SVM Sigmoid
-none,12753.116270541199,SVM Linear 
-none,12389.573581224093,SVM RBF
+cor,0.34199999999999997,AdaBoost
+cor,0.177,Decision Tree
+cor,0.9650000000000001,Extra Trees
+cor,0.1925,Naive Bayes
+cor,3.5,Gaussian Process
+cor,0.08049999999999999,Nearest Neighbors
+cor,0.052500000000000005,Linear Discriminant Analysis
+cor,0.1355,Logistic Regression
+cor,0.44300000000000006,Neural Net
+cor,1.2385,Random Forest
+cor,0.0235,SVM Sigmoid
+cor,3.5,SVM Linear 
+cor,3.5,SVM RBF
+cor,0.0735,QDA
+vif,0.34199999999999997,AdaBoost
+vif,0.17900000000000002,Decision Tree
+vif,0.9724999999999999,Extra Trees
+vif,0.1925,Naive Bayes
+vif,3.5,Gaussian Process
+vif,0.08049999999999999,Nearest Neighbors
+vif,0.052500000000000005,Linear Discriminant Analysis
+vif,0.1345,Logistic Regression
+vif,0.42299999999999993,Neural Net
+vif,0.8950000000000001,Random Forest
+vif,0.0235,SVM Sigmoid
+vif,3.5,SVM Linear 
+vif,3.5,SVM RBF
+vif,0.0735,QDA
+ga,2.5535,AdaBoost
+ga,2.4415000000000004,Decision Tree
+ga,2.3475,Extra Trees
+ga,2.5045,Naive Bayes
+ga,2.348,Gaussian Process
+ga,2.3985,Nearest Neighbors
+ga,2.668,Linear Discriminant Analysis
+ga,2.6995000000000005,Logistic Regression
+ga,2.698,Neural Net
+ga,2.452,Random Forest
+ga,2.782,SVM Sigmoid
+ga,3.5,SVM Linear 
+ga,2.1205,SVM RBF
+ga,2.117,QDA
+none,0.34199999999999997,AdaBoost
+none,0.178,Decision Tree
+none,0.9845,Extra Trees
+none,0.1925,Naive Bayes
+none,3.5,Gaussian Process
+none,0.08049999999999999,Nearest Neighbors
+none,0.052500000000000005,Linear Discriminant Analysis
+none,0.1335,Logistic Regression
+none,0.45249999999999996,Neural Net
+none,0.7505,Random Forest
+none,0.0235,SVM Sigmoid
+none,3.5,SVM Linear 
+none,3.5,SVM RBF
+none,0.0735,QDA
