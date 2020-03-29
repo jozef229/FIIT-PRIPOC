@@ -197,8 +197,18 @@ pd.set_option("display.max_colwidth", -1)
 
 # https://www.kaggle.com/iabhishekofficial/mobile-price-classification#train.csv
 test_dataframe = pd.read_csv('Dataset/train.csv')
+# test_dataframe = pd.read_csv('Dataset/train_mobile.csv')
 
-
+test_dataframe.activity.unique()
+test_dataframe = test_dataframe.replace('STANDING', 1)
+test_dataframe = test_dataframe.replace('SITTING', 2)
+test_dataframe = test_dataframe.replace('LAYING', 3)
+test_dataframe = test_dataframe.replace('WALKING', 4)
+test_dataframe = test_dataframe.replace('WALKING_DOWNSTAIRS', 5)
+test_dataframe = test_dataframe.replace('WALKING_UPSTAIRS', 6)
+test_dataframe['activity'] = test_dataframe['activity'].astype(int)
+test_dataframe.activity.unique()
+test_dataframe.head()
 # %%
 
 model = estimatorFunction[0]
@@ -208,7 +218,8 @@ count_of_children_to_crossover = 30
 count_of_best_chromosome_to_select = 30
 count_of_random_chromosome_to_select = 30
 chance_of_chromosome_mutation = 0.6
-main_value_of_dataset = 'price_range'
+# main_value_of_dataset = 'price_range'
+main_value_of_dataset = 'activity'
 
 # gaSelectFeatures(
 #     model,
@@ -226,8 +237,7 @@ main_value_of_dataset = 'price_range'
 df_stats_model = pd.DataFrame()
 for featureSelection in range(len(featureSelectionName)):
     df_data = test_dataframe.copy()
-    print()
-    print(str(featureSelection) + " FS from " + len(featureSelectionName))
+    print(featureSelection, " FS from ", len(featureSelectionName))
     if featureSelection == 0:
         df_data = corrSelectFeatures(df_data)
     if featureSelection == 1:
@@ -245,7 +255,7 @@ for featureSelection in range(len(featureSelectionName)):
             main_value_of_dataset
         )
     for estimator in range(len(estimatorNames)):
-        print(str(estimator) + "Estimator" + len(estimatorNames))
+        print(str(estimator), "Estimator", len(estimatorNames))
         df_test = df_data.copy()
         y = test_dataframe[main_value_of_dataset]
         X = df_test[list(
