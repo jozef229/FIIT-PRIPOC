@@ -1,10 +1,13 @@
 # %%
-import urllib.request
+import datetime
 import random
+import time
+import urllib.request
 from statistics import mean
 
 import matplotlib.pyplot as plt
 import numpy as np
+import numpy.ma as ma
 import pandas as pd
 import seaborn as sns
 from sklearn import preprocessing
@@ -40,22 +43,26 @@ def corrSelectFeatures(dataset, size_of_delet_corelation=0.95):
     return dataset_out
 
 
-def vifSelectFeatures(dataset, thresh=100.0):
-    variables = list(range(dataset.shape[1]))
+def vifSelectFeatures(X, thresh=100):
+    cols = X.columns
+    variables = np.arange(X.shape[1])
     dropped = True
     while dropped:
         dropped = False
-        vif = [
-            variance_inflation_factor(dataset.iloc[:, variables].values, ix)
-            for ix in range(dataset.iloc[:, variables].shape[1])
-        ]
-        maxloc = vif.index(max(vif))
+        c = X[cols[variables]].values
+        vif = [variance_inflation_factor(c, ix)
+               for ix in np.arange(c.shape[1])]
 
+        maxloc = vif.index(max(vif))
         if max(vif) > thresh:
-            del variables[maxloc]
+            print('dropping \'' + X[cols[variables]
+                                    ].columns[maxloc] + '\' at index: ' + str(maxloc), datetime.datetime.now())
+            variables = np.delete(variables, maxloc)
             dropped = True
-    dataset_out = dataset.iloc[:, variables]
-    return dataset_out
+
+    print('Remaining variables:')
+    print(X.columns[variables])
+    return X[cols[variables]]
 
 
 estimatorFunction = [
@@ -63,15 +70,13 @@ estimatorFunction = [
     DecisionTreeClassifier(max_depth=5),
     ExtraTreesClassifier(n_estimators=5, criterion="entropy", max_features=2),
     GaussianNB(),
-    GaussianProcessClassifier(1.0 * RBF(1.0)),
-    KNeighborsClassifier(),
+    KNeighborsClassifier(n_neighbors=10),
     LinearDiscriminantAnalysis(),
     LogisticRegression(
         penalty="l1", dual=False, max_iter=110, solver="liblinear", multi_class="auto"
     ),
-    MLPClassifier(alpha=1, max_iter=1000),
+    MLPClassifier(alpha=1, max_iter=500),
     RandomForestClassifier(max_depth=5, n_estimators=10, max_features=1),
-    SVC(kernel="linear", C=0.025),
     SVC(kernel="sigmoid", gamma=2),
     SVC(kernel="rbf", gamma=2, C=1),
     QuadraticDiscriminantAnalysis(),
@@ -83,14 +88,12 @@ estimatorNames = [
     "Decision Tree",
     "Extra Trees",
     "Naive Bayes",
-    "Gaussian Process",
     "Nearest Neighbors",
     "Linear Discriminant Analysis",
     "Logistic Regression",
     "Neural Net",
     "Random Forest",
     "SVM Sigmoid",
-    "SVM Linear ",
     "SVM RBF",
     "QDA",
 ]
@@ -111,14 +114,14 @@ def initialPopulation(df, count_of_populations):
     return populations
 
 
-def fitnessEvaluation(estimator, df, populations, main_value_of_dataset):
-    y = df[main_value_of_dataset]
-    X = df[list(filter(lambda x: x != main_value_of_dataset, df.columns.tolist()))]
+def fitnessEvaluation(estimator, X, y, populations, main_value_of_dataset):
     score = []
     for chromosom in populations:
-        score.append(-1.0 * np.mean(cross_val_score(estimator,
-                                                    X.iloc[:, chromosom], y, cv=5, scoring="neg_mean_squared_error")))
-    return np.array(populations)[np.argsort(np.array(score)), :], max(score), mean(score)
+        score.append(np.mean(cross_val_score(
+            estimator, X.iloc[:, ma.make_mask(chromosom)], y, cv=10, scoring="accuracy", n_jobs=-1)))
+    # populations[score.argsort()[::-1]]
+    print(min(score))
+    return np.array(populations)[np.argsort(np.array(score))[::-1], :], max(score), mean(score)
 
 
 def select(populations, df, count_of_best_chromosome_to_select, count_of_random_chromosome_to_select):
@@ -127,21 +130,15 @@ def select(populations, df, count_of_best_chromosome_to_select, count_of_random_
                     random_chromosom] = np.random.randint(2, size=len(df.columns)-1)
 
 
-def mutation(default_populations, chance_of_chromosome_mutation):
-    populations = default_populations.copy()
-    mutation_populations = []
+def mutation(populations, chance_of_chromosome_mutation):
     for chromosom in populations:
         if random.random() < chance_of_chromosome_mutation:
             for i in range(len(chromosom)):
-                if random.random() < 0.5:
+                if random.random() < chance_of_chromosome_mutation:
                     chromosom[i] = 1 - chromosom[i]
-        mutation_populations.append(chromosom)
-    return mutation_populations
 
 
 def crossOver(populations, count_of_children_to_crossover):
-    populations
-    crossover_populations = []
     count = count_of_children_to_crossover
     if count_of_children_to_crossover > len(populations)//2:
         count = len(populations)//2
@@ -149,7 +146,7 @@ def crossOver(populations, count_of_children_to_crossover):
         child, chromosom = populations[i], populations[len(populations)-1-i]
         change = False
         for j in range(len(child)):
-            if change == False and random.random() < 0.5:
+            if change == False and random.random() < 0.6:
                 change = True
             if change == True:
                 chromosom[j] = child[j]
@@ -164,27 +161,30 @@ def plotScores(max_score, average_score):
     plt.show()
 
 
-def gaSelectFeatures(estimator, df, count_populations, count_of_generations, count_of_children_to_crossover, count_of_best_chromosome_to_select, count_of_random_chromosome_to_select, chance_of_chromosome_mutation, main_value_of_dataset):
-    populations = initialPopulation(df, count_populations)
+def gaSelectFeatures(estimator, df, X, y, count_populations, count_of_generations, count_of_children_to_crossover, count_of_best_chromosome_to_select, count_of_random_chromosome_to_select, chance_of_chromosome_mutation, main_value_of_dataset):
+    orderPopulations = initialPopulation(df, count_populations)
     maxScore = 0
     maxChromosom = []
     avgScoreArray = []
     maxScoreArray = []
     for actualGenerations in range(count_of_generations):
-        print(str(actualGenerations) + " -Generation")
+        print(str(actualGenerations) + " -Generation ", datetime.datetime.now())
         orderPopulations, actualMaxScore, actualAvgScore = fitnessEvaluation(
-            estimator, df, populations, main_value_of_dataset)
+            estimator, X, y, orderPopulations, main_value_of_dataset)
         maxScoreArray.append(actualMaxScore)
         avgScoreArray.append(actualAvgScore)
         if maxScore < actualMaxScore:
-            maxChromosom = orderPopulations[0]
+            print(orderPopulations[0])
+            maxChromosom = orderPopulations[0].copy()
             maxScore = actualMaxScore
+            print(actualMaxScore)
         crossOver(orderPopulations, count_of_children_to_crossover)
         select(orderPopulations, df, count_of_best_chromosome_to_select,
                count_of_random_chromosome_to_select)
         mutation(orderPopulations, chance_of_chromosome_mutation)
+    print("last", maxChromosom)
     plotScores(maxScoreArray, avgScoreArray)
-    return pd.concat([df[main_value_of_dataset], X.iloc[:, maxChromosom]], axis=1, sort=False)
+    return pd.concat([df[main_value_of_dataset], X.iloc[:, ma.make_mask(maxChromosom)]], axis=1, sort=False)
 
 
 # %%
@@ -211,33 +211,26 @@ test_dataframe.activity.unique()
 test_dataframe.head()
 # %%
 
-model = estimatorFunction[0]
+model = estimatorFunction[4]
 count_of_populations = 100
 count_of_generations = 20
 count_of_children_to_crossover = 30
-count_of_best_chromosome_to_select = 30
+count_of_best_chromosome_to_select = 20
 count_of_random_chromosome_to_select = 30
 chance_of_chromosome_mutation = 0.6
 # main_value_of_dataset = 'price_range'
 main_value_of_dataset = 'activity'
 
-# gaSelectFeatures(
-#     model,
-#     test_dataframe,
-#     count_of_populations,
-#     count_of_generations,
-#     count_of_children_to_crossover,
-#     count_of_best_chromosome_to_select,
-#     count_of_random_chromosome_to_select,
-#     chance_of_chromosome_mutation,
-#     main_value_of_dataset
-# )
-
-
+print("all", test_dataframe.shape)
+y = test_dataframe[main_value_of_dataset]
+X = test_dataframe[list(
+    filter(lambda x: x != main_value_of_dataset, test_dataframe.columns.tolist()))]
 df_stats_model = pd.DataFrame()
 for featureSelection in range(len(featureSelectionName)):
+    start = time.time()
     df_data = test_dataframe.copy()
-    print(featureSelection, " FS from ", len(featureSelectionName))
+    print(featureSelection, " FS from ", len(
+        featureSelectionName), " ", datetime.datetime.now())
     if featureSelection == 0:
         df_data = corrSelectFeatures(df_data)
     if featureSelection == 1:
@@ -246,6 +239,8 @@ for featureSelection in range(len(featureSelectionName)):
         df_data = gaSelectFeatures(
             model,
             df_data,
+            X,
+            y,
             count_of_populations,
             count_of_generations,
             count_of_children_to_crossover,
@@ -254,17 +249,21 @@ for featureSelection in range(len(featureSelectionName)):
             chance_of_chromosome_mutation,
             main_value_of_dataset
         )
+    done = time.time()
+    elapsed = done - start
     for estimator in range(len(estimatorNames)):
-        print(str(estimator), "Estimator", len(estimatorNames))
+        print(str(estimator), "Estimator", len(
+            estimatorNames), " ", datetime.datetime.now())
         df_test = df_data.copy()
-        y = test_dataframe[main_value_of_dataset]
         X = df_test[list(
             filter(lambda x: x != main_value_of_dataset, df_test.columns.tolist()))]
         try:
             df_stats_model = df_stats_model.append({
                 "Features Selecetion": featureSelectionName[featureSelection],
-                "Score": -1.0 * np.mean(cross_val_score(estimatorFunction[estimator], X, y, cv=5, scoring="neg_mean_squared_error")),
-                "model": estimatorNames[estimator]
+                "Score": np.mean(cross_val_score(estimatorFunction[estimator], X, y, cv=10, scoring="accuracy", n_jobs=-1)),
+                "model": estimatorNames[estimator],
+                "Count features": X.shape[1],
+                "time feature selection": elapsed
             }, ignore_index=True)
             pass
         except ValueError:
@@ -273,7 +272,6 @@ for featureSelection in range(len(featureSelectionName)):
 df_stats_model.to_csv(r'columns_stats_model.csv', index=False, header=True)
 cm = sns.light_palette("green", as_cmap=True)
 styled = df_stats_model.style.background_gradient(cmap=cm)
-styled.to_excel('Documentation/styled_model.xlsx', engine='openpyxl')
-
-
+styled.to_excel('styled_model_mobile.xlsx', engine='openpyxl')
+print("Finish")
 # %%
