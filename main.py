@@ -222,13 +222,14 @@ chance_of_chromosome_mutation = 0.6
 main_value_of_dataset = 'activity'
 
 print("all", test_dataframe.shape)
-y = test_dataframe[main_value_of_dataset]
-X = test_dataframe[list(
-    filter(lambda x: x != main_value_of_dataset, test_dataframe.columns.tolist()))]
+
 df_stats_model = pd.DataFrame()
 for featureSelection in range(len(featureSelectionName)):
     start = time.time()
     df_data = test_dataframe.copy()
+    y = df_data[main_value_of_dataset]
+    X = df_data[list(
+        filter(lambda x: x != main_value_of_dataset, df_data.columns.tolist()))]
     print(featureSelection, " FS from ", len(
         featureSelectionName), " ", datetime.datetime.now())
     if featureSelection == 2:
