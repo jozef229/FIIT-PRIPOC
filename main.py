@@ -100,9 +100,9 @@ estimatorNames = [
 
 
 featureSelectionName = [
-    "cor",
-    "vif",
     "ga",
+    "vif",
+    "cor",
     "none"
 ]
 
@@ -231,11 +231,11 @@ for featureSelection in range(len(featureSelectionName)):
     df_data = test_dataframe.copy()
     print(featureSelection, " FS from ", len(
         featureSelectionName), " ", datetime.datetime.now())
-    if featureSelection == 0:
+    if featureSelection == 2:
         df_data = corrSelectFeatures(df_data)
     if featureSelection == 1:
         df_data = vifSelectFeatures(df_data)
-    if featureSelection == 2:
+    if featureSelection == 0:
         df_data = gaSelectFeatures(
             model,
             df_data,
@@ -272,6 +272,6 @@ for featureSelection in range(len(featureSelectionName)):
 df_stats_model.to_csv(r'columns_stats_model.csv', index=False, header=True)
 cm = sns.light_palette("green", as_cmap=True)
 styled = df_stats_model.style.background_gradient(cmap=cm)
-styled.to_excel('styled_model_mobile.xlsx', engine='openpyxl')
+styled.to_excel('styled_model_finish_behavioral.xlsx', engine='openpyxl')
 print("Finish")
 # %%
