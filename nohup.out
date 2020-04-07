@@ -1,0 +1,809 @@
+all (3609, 563)
+0  FS from  4   2020-04-06 12:13:58.408298
+0 -Generation  2020-04-06 12:13:58.409233
+0.13768518480559327
+[0 1 0 0 0 0 1 0 1 1 0 0 1 0 0 0 0 1 0 0 1 1 0 1 1 0 0 1 1 1 0 0 1 0 1 0 0
+ 1 1 0 1 0 1 1 1 1 1 0 1 0 0 1 0 1 0 1 0 0 1 1 0 0 0 0 1 1 0 1 1 1 0 1 0 0
+ 0 0 0 0 0 0 0 1 0 0 0 0 1 1 0 1 1 1 1 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 1 1 0
+ 1 1 0 1 1 0 1 1 0 0 0 1 0 0 0 0 1 1 0 1 1 1 0 1 1 0 1 0 1 1 0 0 1 0 1 1 0
+ 0 0 0 0 0 0 1 1 0 0 1 1 1 0 0 1 0 1 1 1 0 1 0 0 0 1 1 1 1 1 1 1 0 1 1 0 1
+ 1 1 1 1 1 0 0 1 1 0 1 1 1 1 0 1 0 0 1 1 1 0 0 1 0 1 0 0 0 1 1 1 1 1 0 1 0
+ 0 1 0 1 0 1 0 0 0 0 1 0 1 1 0 0 0 0 1 0 0 1 0 1 1 0 0 1 0 0 1 1 1 1 0 1 1
+ 1 0 1 1 1 1 1 0 0 0 0 0 1 1 0 1 0 0 0 0 0 1 1 0 0 1 1 0 0 0 0 0 0 0 1 0 0
+ 1 0 1 1 1 0 0 0 1 1 1 1 0 0 0 0 0 1 0 1 1 0 1 1 1 0 0 0 1 0 1 0 1 0 1 0 1
+ 1 0 0 0 0 1 1 1 0 0 1 0 1 1 0 0 0 1 1 0 1 0 1 0 0 1 0 1 1 1 0 1 1 1 0 0 0
+ 1 0 1 1 0 1 1 0 0 1 0 0 1 0 0 1 1 0 0 0 0 0 1 1 0 1 1 1 1 1 0 0 0 0 0 1 1
+ 1 1 1 0 0 1 1 1 0 0 0 0 1 0 1 0 1 1 1 1 0 0 0 1 0 0 0 1 0 0 1 0 1 0 0 1 0
+ 1 1 0 1 0 0 1 0 1 1 1 0 1 1 0 1 1 0 0 0 0 0 0 0 0 1 1 0 1 0 1 1 0 1 1 1 1
+ 0 1 1 1 0 1 1 0 1 0 1 1 0 0 0 0 1 0 0 0 1 1 0 0 0 1 0 1 1 1 0 1 1 0 0 1 0
+ 0 0 0 1 1 1 1 0 0 1 0 1 1 1 1 0 1 1 0 0 1 0 0 0 0 1 0 1 0 1 1 1 1 0 0 0 1
+ 0 0 0 1 1 0 1]
+0.9152338303230587
+1 -Generation  2020-04-06 12:18:35.051992
+0.13768518480559327
+2 -Generation  2020-04-06 12:23:02.012698
+0.13768518480559327
+3 -Generation  2020-04-06 12:28:10.094319
+0.13796296258337107
+4 -Generation  2020-04-06 12:32:54.078510
+0.13768518480559327
+5 -Generation  2020-04-06 12:36:49.856104
+0.13796296258337107
+6 -Generation  2020-04-06 12:41:28.055014
+0.13796296258337107
+7 -Generation  2020-04-06 12:46:16.801501
+0.13796296258337107
+8 -Generation  2020-04-06 12:51:02.547837
+0.13768518480559327
+9 -Generation  2020-04-06 12:56:14.401258
+0.13768518480559327
+10 -Generation  2020-04-06 13:00:47.617624
+0.13768518480559327
+11 -Generation  2020-04-06 13:05:02.793122
+0.13768518480559327
+12 -Generation  2020-04-06 13:09:09.396998
+0.13768518480559327
+13 -Generation  2020-04-06 13:12:42.560090
+0.13768518480559327
+14 -Generation  2020-04-06 13:16:43.519119
+0.13768518480559327
+15 -Generation  2020-04-06 13:20:59.936005
+0.13768518480559327
+[0 0 0 1 0 1 0 1 1 0 1 0 0 0 1 1 0 0 0 1 0 0 0 1 1 1 0 1 0 0 1 0 0 0 0 0 0
+ 1 1 0 0 0 1 0 0 0 1 0 1 1 1 1 1 1 1 0 1 1 0 0 1 1 0 0 1 0 0 0 1 0 1 1 0 0
+ 1 0 0 0 0 0 1 1 1 0 0 0 0 1 0 0 1 0 0 0 1 1 1 0 0 0 1 0 0 1 0 0 0 1 0 0 1
+ 0 1 0 1 1 1 0 0 0 0 1 1 0 0 1 1 0 0 0 0 0 1 1 1 1 1 0 0 0 0 0 1 1 1 0 0 1
+ 0 0 0 0 0 1 1 1 0 1 0 0 0 1 0 0 0 1 0 1 0 1 1 0 0 1 0 0 0 0 0 0 1 1 1 1 1
+ 0 0 1 0 1 0 1 1 1 0 0 0 1 0 0 1 1 1 0 0 1 1 1 1 1 0 1 1 0 0 1 0 1 0 0 0 0
+ 1 0 1 0 1 1 0 0 1 1 0 1 0 1 1 1 1 0 1 1 0 1 0 1 0 1 1 0 0 0 1 0 0 0 1 0 0
+ 0 1 0 1 0 0 1 0 0 0 1 1 0 1 1 0 0 0 0 1 1 0 0 0 0 0 1 0 0 0 1 0 1 0 0 1 1
+ 1 1 0 0 1 1 1 0 0 1 0 1 1 1 1 1 1 0 1 0 0 1 0 0 1 1 1 0 1 1 0 1 1 0 1 0 1
+ 1 1 0 0 0 0 1 1 0 1 0 1 0 0 0 0 1 0 1 1 0 0 0 0 1 0 0 0 0 0 1 0 0 1 0 0 1
+ 1 0 0 1 0 1 0 1 0 0 0 0 1 1 1 1 0 0 1 0 0 0 1 0 0 0 0 1 0 1 1 1 1 1 0 0 0
+ 1 0 0 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 0 0 1 0 0 1 1 0 0 1 0 1 1 0 0 1 1 1
+ 0 1 1 1 0 1 0 1 1 1 0 1 0 0 1 0 0 0 0 1 0 0 0 1 1 0 1 0 1 0 1 0 0 1 0 0 0
+ 0 0 1 1 0 0 0 0 0 0 1 1 1 0 0 1 0 1 1 1 0 1 1 1 1 0 1 1 1 1 0 0 0 0 0 1 0
+ 1 1 0 0 1 1 0 0 1 1 1 0 0 0 1 0 1 1 1 0 1 1 0 1 0 0 1 1 0 1 0 0 0 0 0 1 0
+ 0 1 1 1 1 0 0]
+0.9152345397802891
+16 -Generation  2020-04-06 13:25:33.093326
+0.13768518480559327
+17 -Generation  2020-04-06 13:29:40.721944
+0.13768518480559327
+18 -Generation  2020-04-06 13:34:27.699935
+0.13796296258337107
+19 -Generation  2020-04-06 13:38:55.724502
+0.13768518480559327
+last [0 0 0 1 0 1 0 1 1 0 1 0 0 0 1 1 0 0 0 1 0 0 0 1 1 1 0 1 0 0 1 0 0 0 0 0 0
+ 1 1 0 0 0 1 0 0 0 1 0 1 1 1 1 1 1 1 0 1 1 0 0 1 1 0 0 1 0 0 0 1 0 1 1 0 0
+ 1 0 0 0 0 0 1 1 1 0 0 0 0 1 0 0 1 0 0 0 1 1 1 0 0 0 1 0 0 1 0 0 0 1 0 0 1
+ 0 1 0 1 1 1 0 0 0 0 1 1 0 0 1 1 0 0 0 0 0 1 1 1 1 1 0 0 0 0 0 1 1 1 0 0 1
+ 0 0 0 0 0 1 1 1 0 1 0 0 0 1 0 0 0 1 0 1 0 1 1 0 0 1 0 0 0 0 0 0 1 1 1 1 1
+ 0 0 1 0 1 0 1 1 1 0 0 0 1 0 0 1 1 1 0 0 1 1 1 1 1 0 1 1 0 0 1 0 1 0 0 0 0
+ 1 0 1 0 1 1 0 0 1 1 0 1 0 1 1 1 1 0 1 1 0 1 0 1 0 1 1 0 0 0 1 0 0 0 1 0 0
+ 0 1 0 1 0 0 1 0 0 0 1 1 0 1 1 0 0 0 0 1 1 0 0 0 0 0 1 0 0 0 1 0 1 0 0 1 1
+ 1 1 0 0 1 1 1 0 0 1 0 1 1 1 1 1 1 0 1 0 0 1 0 0 1 1 1 0 1 1 0 1 1 0 1 0 1
+ 1 1 0 0 0 0 1 1 0 1 0 1 0 0 0 0 1 0 1 1 0 0 0 0 1 0 0 0 0 0 1 0 0 1 0 0 1
+ 1 0 0 1 0 1 0 1 0 0 0 0 1 1 1 1 0 0 1 0 0 0 1 0 0 0 0 1 0 1 1 1 1 1 0 0 0
+ 1 0 0 1 1 1 1 1 1 1 1 1 1 1 0 1 0 1 1 0 0 1 0 0 1 1 0 0 1 0 1 1 0 0 1 1 1
+ 0 1 1 1 0 1 0 1 1 1 0 1 0 0 1 0 0 0 0 1 0 0 0 1 1 0 1 0 1 0 1 0 0 1 0 0 0
+ 0 0 1 1 0 0 0 0 0 0 1 1 1 0 0 1 0 1 1 1 0 1 1 1 1 0 1 1 1 1 0 0 0 0 0 1 0
+ 1 1 0 0 1 1 0 0 1 1 1 0 0 0 1 0 1 1 1 0 1 1 0 1 0 0 1 1 0 1 0 0 0 0 0 1 0
+ 0 1 1 1 1 0 0]
+0 Estimator 12   2020-04-06 13:43:23.070098
+1 Estimator 12   2020-04-06 13:43:54.132809
+2 Estimator 12   2020-04-06 13:43:56.782122
+3 Estimator 12   2020-04-06 13:43:57.039300
+4 Estimator 12   2020-04-06 13:43:57.215961
+5 Estimator 12   2020-04-06 13:44:01.214910
+/home/varga_jozef229/anaconda3/lib/python3.7/site-packages/sklearn/discriminant_analysis.py:388: UserWarning: Variables are collinear.
+  warnings.warn("Variables are collinear.")
+/home/varga_jozef229/anaconda3/lib/python3.7/site-packages/sklearn/discriminant_analysis.py:388: UserWarning: Variables are collinear.
+  warnings.warn("Variables are collinear.")
+/home/varga_jozef229/anaconda3/lib/python3.7/site-packages/sklearn/discriminant_analysis.py:388: UserWarning: Variables are collinear.
+  warnings.warn("Variables are collinear.")
+/home/varga_jozef229/anaconda3/lib/python3.7/site-packages/sklearn/discriminant_analysis.py:388: UserWarning: Variables are collinear.
+  warnings.warn("Variables are collinear.")
+/home/varga_jozef229/anaconda3/lib/python3.7/site-packages/sklearn/discriminant_analysis.py:388: UserWarning: Variables are collinear.
+  warnings.warn("Variables are collinear.")
+/home/varga_jozef229/anaconda3/lib/python3.7/site-packages/sklearn/discriminant_analysis.py:388: UserWarning: Variables are collinear.
+  warnings.warn("Variables are collinear.")
+/home/varga_jozef229/anaconda3/lib/python3.7/site-packages/sklearn/discriminant_analysis.py:388: UserWarning: Variables are collinear.
+  warnings.warn("Variables are collinear.")
+/home/varga_jozef229/anaconda3/lib/python3.7/site-packages/sklearn/discriminant_analysis.py:388: UserWarning: Variables are collinear.
+  warnings.warn("Variables are collinear.")
+/home/varga_jozef229/anaconda3/lib/python3.7/site-packages/sklearn/discriminant_analysis.py:388: UserWarning: Variables are collinear.
+  warnings.warn("Variables are collinear.")
+/home/varga_jozef229/anaconda3/lib/python3.7/site-packages/sklearn/discriminant_analysis.py:388: UserWarning: Variables are collinear.
+  warnings.warn("Variables are collinear.")
+6 Estimator 12   2020-04-06 13:44:02.945911
+7 Estimator 12   2020-04-06 13:44:21.535007
+8 Estimator 12   2020-04-06 13:45:05.168982
+9 Estimator 12   2020-04-06 13:45:05.415674
+10 Estimator 12   2020-04-06 13:46:10.611054
+11 Estimator 12   2020-04-06 13:47:33.401943
+/home/varga_jozef229/anaconda3/lib/python3.7/site-packages/sklearn/discriminant_analysis.py:692: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+/home/varga_jozef229/anaconda3/lib/python3.7/site-packages/sklearn/discriminant_analysis.py:692: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+/home/varga_jozef229/anaconda3/lib/python3.7/site-packages/sklearn/discriminant_analysis.py:692: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+/home/varga_jozef229/anaconda3/lib/python3.7/site-packages/sklearn/discriminant_analysis.py:692: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+/home/varga_jozef229/anaconda3/lib/python3.7/site-packages/sklearn/discriminant_analysis.py:692: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+/home/varga_jozef229/anaconda3/lib/python3.7/site-packages/sklearn/discriminant_analysis.py:692: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+/home/varga_jozef229/anaconda3/lib/python3.7/site-packages/sklearn/discriminant_analysis.py:692: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+/home/varga_jozef229/anaconda3/lib/python3.7/site-packages/sklearn/discriminant_analysis.py:692: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+/home/varga_jozef229/anaconda3/lib/python3.7/site-packages/sklearn/discriminant_analysis.py:692: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+/home/varga_jozef229/anaconda3/lib/python3.7/site-packages/sklearn/discriminant_analysis.py:692: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+/home/varga_jozef229/anaconda3/lib/python3.7/site-packages/sklearn/discriminant_analysis.py:692: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+/home/varga_jozef229/anaconda3/lib/python3.7/site-packages/sklearn/discriminant_analysis.py:692: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+/home/varga_jozef229/anaconda3/lib/python3.7/site-packages/sklearn/discriminant_analysis.py:692: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+/home/varga_jozef229/anaconda3/lib/python3.7/site-packages/sklearn/discriminant_analysis.py:692: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+/home/varga_jozef229/anaconda3/lib/python3.7/site-packages/sklearn/discriminant_analysis.py:692: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+/home/varga_jozef229/anaconda3/lib/python3.7/site-packages/sklearn/discriminant_analysis.py:692: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+/home/varga_jozef229/anaconda3/lib/python3.7/site-packages/sklearn/discriminant_analysis.py:692: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+/home/varga_jozef229/anaconda3/lib/python3.7/site-packages/sklearn/discriminant_analysis.py:692: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+/home/varga_jozef229/anaconda3/lib/python3.7/site-packages/sklearn/discriminant_analysis.py:692: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+/home/varga_jozef229/anaconda3/lib/python3.7/site-packages/sklearn/discriminant_analysis.py:692: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+/home/varga_jozef229/anaconda3/lib/python3.7/site-packages/sklearn/discriminant_analysis.py:692: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+/home/varga_jozef229/anaconda3/lib/python3.7/site-packages/sklearn/discriminant_analysis.py:692: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+/home/varga_jozef229/anaconda3/lib/python3.7/site-packages/sklearn/discriminant_analysis.py:692: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+/home/varga_jozef229/anaconda3/lib/python3.7/site-packages/sklearn/discriminant_analysis.py:692: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+/home/varga_jozef229/anaconda3/lib/python3.7/site-packages/sklearn/discriminant_analysis.py:692: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+/home/varga_jozef229/anaconda3/lib/python3.7/site-packages/sklearn/discriminant_analysis.py:692: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+/home/varga_jozef229/anaconda3/lib/python3.7/site-packages/sklearn/discriminant_analysis.py:692: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+/home/varga_jozef229/anaconda3/lib/python3.7/site-packages/sklearn/discriminant_analysis.py:692: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+/home/varga_jozef229/anaconda3/lib/python3.7/site-packages/sklearn/discriminant_analysis.py:692: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+/home/varga_jozef229/anaconda3/lib/python3.7/site-packages/sklearn/discriminant_analysis.py:692: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+/home/varga_jozef229/anaconda3/lib/python3.7/site-packages/sklearn/discriminant_analysis.py:692: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+/home/varga_jozef229/anaconda3/lib/python3.7/site-packages/sklearn/discriminant_analysis.py:692: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+/home/varga_jozef229/anaconda3/lib/python3.7/site-packages/sklearn/discriminant_analysis.py:692: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+/home/varga_jozef229/anaconda3/lib/python3.7/site-packages/sklearn/discriminant_analysis.py:692: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+/home/varga_jozef229/anaconda3/lib/python3.7/site-packages/sklearn/discriminant_analysis.py:692: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+/home/varga_jozef229/anaconda3/lib/python3.7/site-packages/sklearn/discriminant_analysis.py:692: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+/home/varga_jozef229/anaconda3/lib/python3.7/site-packages/sklearn/discriminant_analysis.py:692: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+/home/varga_jozef229/anaconda3/lib/python3.7/site-packages/sklearn/discriminant_analysis.py:692: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+/home/varga_jozef229/anaconda3/lib/python3.7/site-packages/sklearn/discriminant_analysis.py:692: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+/home/varga_jozef229/anaconda3/lib/python3.7/site-packages/sklearn/discriminant_analysis.py:692: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+/home/varga_jozef229/anaconda3/lib/python3.7/site-packages/sklearn/discriminant_analysis.py:692: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+/home/varga_jozef229/anaconda3/lib/python3.7/site-packages/sklearn/discriminant_analysis.py:692: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+/home/varga_jozef229/anaconda3/lib/python3.7/site-packages/sklearn/discriminant_analysis.py:692: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+/home/varga_jozef229/anaconda3/lib/python3.7/site-packages/sklearn/discriminant_analysis.py:692: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+/home/varga_jozef229/anaconda3/lib/python3.7/site-packages/sklearn/discriminant_analysis.py:692: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+/home/varga_jozef229/anaconda3/lib/python3.7/site-packages/sklearn/discriminant_analysis.py:692: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+/home/varga_jozef229/anaconda3/lib/python3.7/site-packages/sklearn/discriminant_analysis.py:692: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+/home/varga_jozef229/anaconda3/lib/python3.7/site-packages/sklearn/discriminant_analysis.py:692: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+/home/varga_jozef229/anaconda3/lib/python3.7/site-packages/sklearn/discriminant_analysis.py:692: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+/home/varga_jozef229/anaconda3/lib/python3.7/site-packages/sklearn/discriminant_analysis.py:692: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+/home/varga_jozef229/anaconda3/lib/python3.7/site-packages/sklearn/discriminant_analysis.py:692: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+/home/varga_jozef229/anaconda3/lib/python3.7/site-packages/sklearn/discriminant_analysis.py:692: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+/home/varga_jozef229/anaconda3/lib/python3.7/site-packages/sklearn/discriminant_analysis.py:692: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+/home/varga_jozef229/anaconda3/lib/python3.7/site-packages/sklearn/discriminant_analysis.py:692: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+/home/varga_jozef229/anaconda3/lib/python3.7/site-packages/sklearn/discriminant_analysis.py:692: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+/home/varga_jozef229/anaconda3/lib/python3.7/site-packages/sklearn/discriminant_analysis.py:692: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+/home/varga_jozef229/anaconda3/lib/python3.7/site-packages/sklearn/discriminant_analysis.py:692: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+/home/varga_jozef229/anaconda3/lib/python3.7/site-packages/sklearn/discriminant_analysis.py:692: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+/home/varga_jozef229/anaconda3/lib/python3.7/site-packages/sklearn/discriminant_analysis.py:692: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+/home/varga_jozef229/anaconda3/lib/python3.7/site-packages/sklearn/discriminant_analysis.py:692: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+1  FS from  4   2020-04-06 13:47:34.991041
+/home/varga_jozef229/anaconda3/lib/python3.7/site-packages/statsmodels/stats/outliers_influence.py:181: RuntimeWarning: divide by zero encountered in double_scalars
+  vif = 1. / (1. - r_squared_i)
+dropping 'tBodyAccMag.mean' at index: 202 2020-04-06 13:56:41.205972
+dropping 'tBodyAccMag.std' at index: 202 2020-04-06 14:05:44.990141
+dropping 'tBodyAccMag.mad' at index: 202 2020-04-06 14:14:20.320486
+dropping 'tBodyAccMag.max' at index: 202 2020-04-06 14:23:09.704811
+dropping 'tBodyAccMag.min' at index: 202 2020-04-06 14:31:42.781909
+dropping 'tBodyAccMag.sma' at index: 202 2020-04-06 14:40:26.230181
+dropping 'tBodyAccMag.energy' at index: 202 2020-04-06 14:48:51.714722
+dropping 'tBodyAccMag.iqr' at index: 202 2020-04-06 14:57:29.997491
+dropping 'tBodyAccMag.entropy' at index: 202 2020-04-06 15:05:52.322443
+dropping 'tBodyAccMag.arCoeff1' at index: 202 2020-04-06 15:14:25.122340
+dropping 'tBodyAccMag.arCoeff2' at index: 202 2020-04-06 15:22:39.571011
+dropping 'tBodyAccMag.arCoeff3' at index: 202 2020-04-06 15:31:06.248597
+dropping 'tBodyAccMag.arCoeff4' at index: 202 2020-04-06 15:39:16.562942
+dropping 'tGravityAccMag.mean' at index: 202 2020-04-06 15:47:37.843517
+dropping 'tBodyAccJerkMag.mean' at index: 214 2020-04-06 15:55:43.803946
+dropping 'tBodyGyroMag.mean' at index: 226 2020-04-06 16:04:01.107149
+dropping 'tBodyGyroJerkMag.mean' at index: 238 2020-04-06 16:12:02.833773
+dropping 'fBodyAccMag.mean' at index: 487 2020-04-06 16:20:14.726766
+dropping 'fBodyBodyAccJerkMag.mean' at index: 499 2020-04-06 16:28:11.326084
+dropping 'fBodyBodyGyroMag.mean' at index: 511 2020-04-06 16:36:17.838952
+dropping 'fBodyBodyGyroJerkMag.mean' at index: 523 2020-04-06 16:44:21.298430
+dropping 'fBodyAccJerk.energy.Z' at index: 347 2020-04-06 16:52:23.054493
+dropping 'fBodyAccJerk.energy.Y' at index: 346 2020-04-06 16:59:56.903777
+dropping 'fBodyGyro.bandsEnergy.1.24' at index: 455 2020-04-06 17:07:31.141244
+dropping 'fBodyAccJerk.energy.X' at index: 345 2020-04-06 17:15:01.458694
+dropping 'fBodyGyro.bandsEnergy.49.64' at index: 453 2020-04-06 17:22:29.820682
+dropping 'fBodyAcc.energy.X' at index: 266 2020-04-06 17:29:52.990653
+dropping 'tBodyAccJerk.energy.Z' at index: 100 2020-04-06 17:37:17.221431
+dropping 'fBodyGyro.bandsEnergy.25.48.1' at index: 465 2020-04-06 17:44:39.097756
+dropping 'fBodyGyro.bandsEnergy.25.48.2' at index: 478 2020-04-06 17:51:58.937840
+dropping 'fBodyAcc.bandsEnergy.49.64' at index: 296 2020-04-06 17:59:14.458603
+dropping 'fBodyAccJerk.bandsEnergy.25.48.2' at index: 401 2020-04-06 18:06:29.697180
+dropping 'fBodyGyro.bandsEnergy.1.24.2' at index: 475 2020-04-06 18:13:43.661678
+dropping 'fBodyGyro.bandsEnergy.33.48.1' at index: 460 2020-04-06 18:20:53.541768
+dropping 'fBodyGyro.bandsEnergy.49.64.2' at index: 473 2020-04-06 18:27:58.265351
+dropping 'tBodyAccJerk.energy.X' at index: 98 2020-04-06 18:35:08.469474
+dropping 'fBodyGyro.bandsEnergy.1.16' at index: 445 2020-04-06 18:42:15.438867
+dropping 'fBodyAccJerk.bandsEnergy.17.32.2' at index: 396 2020-04-06 18:49:19.043887
+dropping 'tBodyGyroJerkMag.energy' at index: 241 2020-04-06 18:56:22.854192
+dropping 'fBodyAccJerk.bandsEnergy.49.64' at index: 369 2020-04-06 19:03:27.530846
+dropping 'fBodyGyro.bandsEnergy.25.48' at index: 444 2020-04-06 19:10:27.756291
+dropping 'fBodyAcc.bandsEnergy.33.48' at index: 293 2020-04-06 19:17:24.062359
+dropping 'fBodyAccJerk.bandsEnergy.33.48' at index: 367 2020-04-06 19:24:16.775286
+dropping 'fBodyGyro.bandsEnergy.33.48.2' at index: 464 2020-04-06 19:31:09.178572
+dropping 'fBodyAccJerk.bandsEnergy.1.24' at index: 367 2020-04-06 19:38:02.071921
+dropping 'fBodyAcc.bandsEnergy.25.48.2' at index: 322 2020-04-06 19:44:51.720453
+dropping 'fBodyAcc.bandsEnergy.1.24.2' at index: 321 2020-04-06 19:51:34.591138
+dropping 'fBodyGyro.bandsEnergy.1.16.2' at index: 459 2020-04-06 19:58:18.603242
+dropping 'fBodyGyro.bandsEnergy.49.64.1' at index: 449 2020-04-06 20:04:59.259188
+dropping 'fBodyGyro.bandsEnergy.17.32.1' at index: 448 2020-04-06 20:11:39.599930
+dropping 'fBodyAcc.bandsEnergy.1.24' at index: 293 2020-04-06 20:18:23.162014
+dropping 'fBodyGyro.bandsEnergy.33.48' at index: 437 2020-04-06 20:25:03.126445
+dropping 'fBodyAcc.bandsEnergy.17.32.2' at index: 317 2020-04-06 20:31:35.150006
+dropping 'fBodyAccJerk.bandsEnergy.1.16' at index: 361 2020-04-06 20:38:02.846038
+dropping 'fBodyGyro.bandsEnergy.1.16.1' at index: 443 2020-04-06 20:44:24.420895
+dropping 'tBodyAccJerkMag.energy' at index: 217 2020-04-06 20:50:47.038625
+dropping 'fBodyAcc.bandsEnergy.25.48' at index: 292 2020-04-06 20:57:04.863143
+dropping 'tBodyAccJerk.energy.Y' at index: 98 2020-04-06 21:03:19.066485
+dropping 'fBodyAcc.bandsEnergy.1.24.1' at index: 303 2020-04-06 21:09:29.511126
+dropping 'fBodyGyro.energy.Y' at index: 402 2020-04-06 21:15:38.947701
+dropping 'fBodyAccJerk.bandsEnergy.49.64.1' at index: 370 2020-04-06 21:21:47.036551
+dropping 'fBodyGyro.bandsEnergy.17.32' at index: 428 2020-04-06 21:27:54.117684
+dropping 'fBodyAcc.bandsEnergy.49.64.1' at index: 302 2020-04-06 21:33:56.902926
+dropping 'fBodyAcc.bandsEnergy.17.32' at index: 290 2020-04-06 21:40:03.069928
+dropping 'fBodyAccJerk.bandsEnergy.25.48.1' at index: 369 2020-04-06 21:46:05.429952
+dropping 'fBodyAccJerk.bandsEnergy.17.32' at index: 355 2020-04-06 21:52:05.414415
+dropping 'fBodyAcc.bandsEnergy.1.16.2' at index: 310 2020-04-06 21:58:01.389353
+dropping 'fBodyAccJerk.bandsEnergy.1.16.1' at index: 363 2020-04-06 22:03:54.022263
+dropping 'fBodyAcc.bandsEnergy.25.48.1' at index: 301 2020-04-06 22:09:43.190502
+dropping 'fBodyGyro.energy.X' at index: 393 2020-04-06 22:15:31.221562
+dropping 'fBodyAccJerk.bandsEnergy.49.64.2' at index: 375 2020-04-06 22:21:17.091423
+dropping 'fBodyAccJerk.bandsEnergy.33.48.2' at index: 374 2020-04-06 22:27:25.009896
+dropping 'fBodyAcc.bandsEnergy.49.64.2' at index: 310 2020-04-06 22:33:27.317937
+dropping 'fBodyAccJerk.bandsEnergy.1.24.2' at index: 373 2020-04-06 22:39:07.458760
+dropping 'fBodyAcc.bandsEnergy.1.16' at index: 289 2020-04-06 22:44:41.408174
+dropping 'fBodyAcc.bandsEnergy.33.48.2' at index: 308 2020-04-06 22:50:14.345669
+dropping 'fBodyAccJerk.bandsEnergy.1.16.2' at index: 370 2020-04-06 22:55:44.684709
+dropping 'fBodyAcc.energy.Y' at index: 261 2020-04-06 23:01:14.088711
+dropping 'fBodyAccJerk.bandsEnergy.17.32.1' at index: 358 2020-04-06 23:06:39.708431
+dropping 'fBodyAcc.bandsEnergy.33.48.1' at index: 298 2020-04-06 23:12:04.748766
+dropping 'fBodyGyro.bandsEnergy.17.32.2' at index: 427 2020-04-06 23:17:27.699353
+dropping 'fBodyAccJerk.bandsEnergy.1.24.1' at index: 358 2020-04-06 23:22:48.489485
+dropping 'fBodyAccJerk.bandsEnergy.25.48' at index: 348 2020-04-06 23:28:06.108544
+dropping 'fBodyAccJerk.bandsEnergy.33.48.1' at index: 356 2020-04-06 23:33:22.646349
+dropping 'fBodyGyro.energy.Z' at index: 380 2020-04-06 23:38:37.064000
+dropping 'fBodyAcc.bandsEnergy.17.32.1' at index: 297 2020-04-06 23:43:49.604255
+dropping 'fBodyAcc.energy.Z' at index: 261 2020-04-06 23:48:58.585444
+dropping 'fBodyAcc.bandsEnergy.1.16.1' at index: 295 2020-04-06 23:54:07.365380
+dropping 'fBodyGyro.sma' at index: 376 2020-04-06 23:59:14.104401
+dropping 'fBodyAcc.sma' at index: 260 2020-04-07 00:04:19.014376
+dropping 'fBodyAccJerk.sma' at index: 317 2020-04-07 00:09:19.503503
+dropping 'tBodyGyroMag.energy' at index: 227 2020-04-07 00:14:20.231413
+dropping 'tGravityAccMag.energy' at index: 204 2020-04-07 00:19:18.487582
+dropping 'tGravityAcc.arCoeff.X.3' at index: 69 2020-04-07 00:24:14.907867
+dropping 'tBodyGyroJerk.sma' at index: 173 2020-04-07 00:29:09.145059
+dropping 'tGravityAcc.arCoeff.Z.3' at index: 76 2020-04-07 00:34:03.201797
+dropping 'tGravityAcc.arCoeff.Y.3' at index: 72 2020-04-07 00:38:54.755899
+dropping 'tBodyAccJerk.std.Z' at index: 84 2020-04-07 00:43:44.253595
+dropping 'tGravityAcc.std.X' at index: 45 2020-04-07 00:48:29.965153
+dropping 'tGravityAcc.std.Y' at index: 45 2020-04-07 00:53:15.565753
+dropping 'tBodyAccJerk.sma' at index: 91 2020-04-07 00:57:58.775117
+dropping 'tGravityAcc.arCoeff.Z.2' at index: 72 2020-04-07 01:02:40.143456
+dropping 'tBodyGyroJerkMag.std' at index: 223 2020-04-07 01:07:18.362497
+dropping 'tBodyAccJerk.std.X' at index: 79 2020-04-07 01:11:56.396401
+dropping 'tBodyAccJerk.std.Y' at index: 79 2020-04-07 01:16:32.775218
+dropping 'tGravityAcc.arCoeff.X.2' at index: 66 2020-04-07 01:21:07.448088
+dropping 'tGravityAcc.mad.Z' at index: 48 2020-04-07 01:25:38.122510
+dropping 'tBodyGyro.std.X' at index: 110 2020-04-07 01:30:09.111226
+dropping 'tGravityAcc.arCoeff.Y.2' at index: 67 2020-04-07 01:34:38.558824
+dropping 'tBodyAcc.std.X' at index: 5 2020-04-07 01:39:06.081977
+dropping 'tBodyAccJerkMag.std' at index: 194 2020-04-07 01:43:30.156856
+dropping 'tBodyAcc.energy.X' at index: 17 2020-04-07 01:47:54.072993
+dropping 'tBodyAcc.std.Y' at index: 5 2020-04-07 01:52:16.441903
+dropping 'fBodyGyro.bandsEnergy.1.24.1' at index: 386 2020-04-07 01:56:36.727630
+dropping 'tBodyGyro.std.Y' at index: 106 2020-04-07 02:00:54.603172
+dropping 'tBodyGyro.std.Z' at index: 106 2020-04-07 02:05:10.570846
+dropping 'tGravityAccMag.std' at index: 179 2020-04-07 02:09:25.320864
+dropping 'tBodyAcc.std.Z' at index: 5 2020-04-07 02:13:38.730197
+dropping 'tGravityAcc.mad.X' at index: 42 2020-04-07 02:17:49.914454
+dropping 'tBodyGyroMag.std' at index: 197 2020-04-07 02:22:00.797070
+dropping 'tGravityAcc.mad.Y' at index: 42 2020-04-07 02:26:09.599550
+dropping 'tBodyGyroJerk.energy.Y' at index: 153 2020-04-07 02:30:16.643059
+dropping 'tGravityAcc.std.Z' at index: 41 2020-04-07 02:34:20.489352
+dropping 'tBodyGyroJerk.mad.Y' at index: 143 2020-04-07 02:38:23.986456
+dropping 'tBodyAccJerkMag.sma' at index: 186 2020-04-07 02:42:26.129855
+dropping 'tBodyGyroJerkMag.sma' at index: 205 2020-04-07 02:46:26.447600
+dropping 'fBodyAccJerk.bandsEnergy.25.32.2' at index: 320 2020-04-07 02:50:24.711171
+dropping 'tBodyGyroJerkMag.mad' at index: 202 2020-04-07 02:54:22.237135
+dropping 'tBodyGyro.energy.Y' at index: 113 2020-04-07 02:58:18.981726
+dropping 'fBodyAccJerk.std.Z' at index: 271 2020-04-07 03:02:13.308986
+dropping 'tBodyGyroJerk.std.Z' at index: 140 2020-04-07 03:06:03.886713
+dropping 'tBodyGyroJerk.std.X' at index: 138 2020-04-07 03:09:54.152099
+dropping 'fBodyAccJerk.bandsEnergy.33.40.2' at index: 315 2020-04-07 03:13:43.551819
+dropping 'tGravityAcc.mean.X' at index: 38 2020-04-07 03:17:31.324422
+dropping 'tBodyAccJerk.mad.Z' at index: 70 2020-04-07 03:21:16.666302
+dropping 'fBodyBodyGyroJerkMag.energy' at index: 414 2020-04-07 03:25:01.755649
+dropping 'fBodyGyro.std.X' at index: 319 2020-04-07 03:28:44.809372
+dropping 'tBodyAcc.mad.X' at index: 5 2020-04-07 03:32:26.300553
+dropping 'tBodyGyroJerk.energy.Z' at index: 145 2020-04-07 03:36:05.386789
+dropping 'tBodyGyro.mad.Y' at index: 100 2020-04-07 03:39:43.481363
+dropping 'fBodyBodyGyroJerkMag.std' at index: 405 2020-04-07 03:43:20.247748
+dropping 'tBodyAccJerk.mad.X' at index: 67 2020-04-07 03:46:55.951551
+dropping 'tBodyGyroJerk.energy.X' at index: 142 2020-04-07 03:50:29.607085
+dropping 'tBodyAccJerkMag.mad' at index: 173 2020-04-07 03:54:03.494635
+dropping 'fBodyBodyAccJerkMag.energy' at index: 383 2020-04-07 03:57:36.561685
+dropping 'fBodyAccJerk.bandsEnergy.17.24.2' at index: 306 2020-04-07 04:01:08.563058
+dropping 'tGravityAccMag.mad' at index: 163 2020-04-07 04:04:37.709977
+dropping 'fBodyGyro.std.Z' at index: 312 2020-04-07 04:07:52.533993
+dropping 'tGravityAccMag.sma' at index: 165 2020-04-07 04:11:05.674198
+dropping 'fBodyBodyGyroMag.std' at index: 385 2020-04-07 04:14:15.956034
+dropping 'tBodyAccJerk.mad.Y' at index: 67 2020-04-07 04:17:23.836994
+dropping 'tBodyGyroJerk.std.Y' at index: 132 2020-04-07 04:20:31.347194
+dropping 'tBodyGyroMag.sma' at index: 180 2020-04-07 04:23:37.517452
+dropping 'fBodyAcc.mean.Z' at index: 196 2020-04-07 04:26:42.497929
+dropping 'fBodyAccJerk.std.X' at index: 253 2020-04-07 04:29:45.317547
+dropping 'fBodyAcc.std.Z' at index: 198 2020-04-07 04:32:49.080997
+dropping 'tBodyGyro.mad.X' at index: 97 2020-04-07 04:35:51.627990
+dropping 'fBodyAcc.mean.X' at index: 193 2020-04-07 04:38:52.616534
+dropping 'tGravityAcc.min.X' at index: 42 2020-04-07 04:41:51.793819
+dropping 'fBodyGyro.mad.Y' at index: 303 2020-04-07 04:44:50.755615
+dropping 'tBodyAcc.mad.Y' at index: 5 2020-04-07 04:47:46.546686
+dropping 'tGravityAccMag.arCoeff2' at index: 163 2020-04-07 04:50:41.614206
+dropping 'tBodyGyroMag.arCoeff2' at index: 179 2020-04-07 04:53:33.954328
+dropping 'fBodyAcc.std.X' at index: 190 2020-04-07 04:56:26.095377
+dropping 'fBodyAccJerk.std.Y' at index: 245 2020-04-07 04:59:17.412022
+dropping 'fBodyAccJerk.mean.Z' at index: 244 2020-04-07 05:02:08.690372
+dropping 'fBodyGyro.bandsEnergy.1.8.2' at index: 338 2020-04-07 05:04:56.630586
+dropping 'fBodyAccMag.std' at index: 345 2020-04-07 05:07:46.928156
+dropping 'tBodyGyro.mad.Z' at index: 95 2020-04-07 05:10:36.518068
+dropping 'fBodyGyro.mean.X' at index: 291 2020-04-07 05:13:30.334279
+dropping 'fBodyBodyGyroJerkMag.sma' at index: 379 2020-04-07 05:16:17.422892
+dropping 'fBodyAcc.mean.Y' at index: 188 2020-04-07 05:19:03.111410
+dropping 'fBodyAccJerk.mad.Z' at index: 244 2020-04-07 05:21:47.592393
+dropping 'tBodyGyro.energy.X' at index: 102 2020-04-07 05:24:29.978415
+dropping 'fBodyBodyAccJerkMag.std' at index: 351 2020-04-07 05:27:09.320386
+dropping 'fBodyAcc.bandsEnergy.49.56' at index: 221 2020-04-07 05:29:50.654760
+dropping 'fBodyAccJerk.bandsEnergy.41.48.2' at index: 284 2020-04-07 05:32:30.840895
+dropping 'fBodyAccJerk.mean.X' at index: 238 2020-04-07 05:35:08.844354
+dropping 'fBodyGyro.bandsEnergy.57.64' at index: 321 2020-04-07 05:37:43.984143
+dropping 'fBodyAccMag.energy' at index: 340 2020-04-07 05:40:19.526490
+dropping 'tBodyAcc.mad.Z' at index: 5 2020-04-07 05:42:51.937524
+dropping 'tBodyGyroJerk.mad.Z' at index: 127 2020-04-07 05:45:25.259292
+dropping 'fBodyAcc.bandsEnergy.49.56.2' at index: 234 2020-04-07 05:47:54.465703
+dropping 'tBodyGyroMag.mad' at index: 169 2020-04-07 05:50:25.788956
+dropping 'tBodyGyroJerk.mad.X' at index: 126 2020-04-07 05:52:52.827565
+dropping 'fBodyGyro.mean.Z' at index: 281 2020-04-07 05:55:21.153403
+dropping 'fBodyAccJerk.bandsEnergy.25.32.1' at index: 271 2020-04-07 05:57:45.688684
+dropping 'fBodyGyro.mean.Y' at index: 279 2020-04-07 06:00:10.959483
+dropping 'fBodyAcc.std.Y' at index: 183 2020-04-07 06:02:33.991687
+dropping 'fBodyAccJerk.mean.Y' at index: 232 2020-04-07 06:04:56.510158
+dropping 'tGravityAcc.mean.Y' at index: 35 2020-04-07 06:07:13.843557
+dropping 'fBodyGyro.bandsEnergy.33.40.1' at index: 314 2020-04-07 06:09:32.922850
+dropping 'fBodyBodyGyroMag.sma' at index: 347 2020-04-07 06:11:50.503267
+dropping 'fBodyAcc.bandsEnergy.17.24.1' at index: 218 2020-04-07 06:14:07.819268
+dropping 'tGravityAcc.mean.Z' at index: 35 2020-04-07 06:16:21.183416
+dropping 'fBodyAcc.bandsEnergy.1.8' at index: 208 2020-04-07 06:18:36.325350
+dropping 'fBodyGyro.bandsEnergy.1.8' at index: 300 2020-04-07 06:20:48.690278
+dropping 'tBodyAcc.sma' at index: 11 2020-04-07 06:23:00.961495
+dropping 'fBodyAcc.bandsEnergy.9.16.2' at index: 221 2020-04-07 06:25:11.625549
+dropping 'fBodyAccJerk.bandsEnergy.17.24' at index: 254 2020-04-07 06:27:22.545184
+dropping 'fBodyAccJerk.bandsEnergy.33.40.1' at index: 262 2020-04-07 06:29:30.809681
+dropping 'tGravityAcc.iqr.Y' at index: 44 2020-04-07 06:31:39.448986
+dropping 'fBodyGyro.std.Y' at index: 268 2020-04-07 06:33:44.443180
+dropping 'fBodyAcc.bandsEnergy.25.32.2' at index: 221 2020-04-07 06:35:50.678974
+dropping 'fBodyBodyGyroJerkMag.mad' at index: 343 2020-04-07 06:37:54.721298
+dropping 'fBodyAccJerk.bandsEnergy.25.32' at index: 252 2020-04-07 06:39:59.054518
+dropping 'fBodyGyro.bandsEnergy.33.40.2' at index: 308 2020-04-07 06:42:00.480706
+dropping 'fBodyAccJerk.mad.Y' at index: 225 2020-04-07 06:44:05.411655
+dropping 'fBodyAccJerk.bandsEnergy.9.16' at index: 250 2020-04-07 06:46:05.650986
+dropping 'fBodyAcc.bandsEnergy.1.8.2' at index: 219 2020-04-07 06:48:05.995450
+dropping 'fBodyGyro.bandsEnergy.25.32.2' at index: 304 2020-04-07 06:50:03.955131
+dropping 'fBodyBodyAccJerkMag.sma' at index: 320 2020-04-07 06:52:02.944664
+dropping 'fBodyGyro.bandsEnergy.25.32.1' at index: 298 2020-04-07 06:53:59.620791
+dropping 'fBodyAcc.bandsEnergy.33.40.2' at index: 220 2020-04-07 06:55:56.273506
+dropping 'fBodyGyro.bandsEnergy.57.64.2' at index: 304 2020-04-07 06:57:50.701900
+dropping 'tBodyAcc.energy.Y' at index: 11 2020-04-07 06:59:46.634809
+dropping 'fBodyAccJerk.bandsEnergy.9.16.1' at index: 252 2020-04-07 07:01:40.900796
+dropping 'fBodyAccJerk.bandsEnergy.33.40' at index: 247 2020-04-07 07:03:34.581458
+dropping 'fBodyGyro.bandsEnergy.9.16.1' at index: 292 2020-04-07 07:05:24.779815
+dropping 'fBodyGyro.bandsEnergy.41.48' at index: 289 2020-04-07 07:07:16.274870
+dropping 'fBodyAcc.bandsEnergy.57.64.1' at index: 217 2020-04-07 07:09:06.080862
+dropping 'fBodyAccJerk.mad.X' at index: 220 2020-04-07 07:10:56.270023
+dropping 'tGravityAcc.energy.Z' at index: 41 2020-04-07 07:12:44.251663
+dropping 'fBodyAccMag.sma' at index: 299 2020-04-07 07:14:32.507584
+dropping 'fBodyGyro.bandsEnergy.17.24.1' at index: 288 2020-04-07 07:16:18.497101
+dropping 'fBodyGyro.bandsEnergy.25.32' at index: 284 2020-04-07 07:18:04.670542
+dropping 'tBodyGyro.energy.Z' at index: 95 2020-04-07 07:19:48.048540
+dropping 'angle.X.gravityMean' at index: 333 2020-04-07 07:21:32.434817
+dropping 'tGravityAcc.iqr.Z' at index: 42 2020-04-07 07:23:14.921779
+dropping 'fBodyAcc.bandsEnergy.41.48' at index: 206 2020-04-07 07:24:56.955331
+dropping 'fBodyBodyGyroMag.energy' at index: 312 2020-04-07 07:26:36.792445
+dropping 'fBodyGyro.bandsEnergy.41.48.2' at index: 289 2020-04-07 07:28:17.836371
+dropping 'tBodyGyroJerkMag.arCoeff2' at index: 172 2020-04-07 07:29:56.983115
+dropping 'tGravityAcc.iqr.X' at index: 41 2020-04-07 07:31:36.038169
+dropping 'tBodyGyroJerkMag.max' at index: 166 2020-04-07 07:33:12.359817
+dropping 'fBodyAcc.bandsEnergy.1.8.1' at index: 204 2020-04-07 07:34:49.654660
+dropping 'tBodyGyro.arCoeff.X.1' at index: 99 2020-04-07 07:36:25.003571
+dropping 'fBodyAccJerk.max.Z' at index: 213 2020-04-07 07:38:00.792617
+dropping 'fBodyGyro.mad.X' at index: 247 2020-04-07 07:39:34.545532
+dropping 'fBodyGyro.bandsEnergy.49.56' at index: 275 2020-04-07 07:41:09.205416
+dropping 'tBodyAcc.energy.Z' at index: 11 2020-04-07 07:42:42.172898
+dropping 'fBodyGyro.bandsEnergy.57.64.1' at index: 277 2020-04-07 07:44:15.004442
+dropping 'tBodyGyroJerkMag.iqr' at index: 165 2020-04-07 07:45:45.511989
+dropping 'fBodyBodyAccJerkMag.mad' at index: 288 2020-04-07 07:47:16.037149
+dropping 'fBodyAcc.mad.X' at index: 169 2020-04-07 07:48:44.987252
+dropping 'fBodyAcc.mad.Z' at index: 170 2020-04-07 07:50:13.705193
+dropping 'fBodyBodyGyroMag.mad' at index: 294 2020-04-07 07:51:40.214929
+dropping 'fBodyGyro.bandsEnergy.41.48.1' at index: 272 2020-04-07 07:53:07.466078
+dropping 'fBodyAccJerk.bandsEnergy.57.64' at index: 233 2020-04-07 07:54:33.257118
+dropping 'fBodyAccJerk.kurtosis.Y' at index: 227 2020-04-07 07:55:58.727667
+dropping 'tBodyGyro.arCoeff.Z.2' at index: 106 2020-04-07 07:57:21.759103
+dropping 'fBodyBodyGyroJerkMag.max' at index: 298 2020-04-07 07:58:45.692516
+dropping 'tBodyAccJerkMag.arCoeff1' at index: 152 2020-04-07 08:00:08.022636
+dropping 'fBodyAcc.mad.Y' at index: 167 2020-04-07 08:01:30.271650
+dropping 'tBodyGyro.arCoeff.Y.2' at index: 102 2020-04-07 08:02:50.613442
+dropping 'fBodyGyro.mad.Z' at index: 237 2020-04-07 08:04:11.816444
+dropping 'fBodyAcc.bandsEnergy.41.48.1' at index: 198 2020-04-07 08:05:31.356188
+dropping 'tBodyGyro.sma' at index: 91 2020-04-07 08:06:50.747640
+dropping 'fBodyAcc.bandsEnergy.17.24.2' at index: 198 2020-04-07 08:08:07.799086
+dropping 'fBodyAccJerk.bandsEnergy.1.8' at index: 222 2020-04-07 08:09:25.545428
+dropping 'fBodyGyro.bandsEnergy.33.40' at index: 259 2020-04-07 08:10:41.851958
+dropping 'tBodyAcc.arCoeff.X.1' at index: 17 2020-04-07 08:11:58.642747
+dropping 'fBodyAccJerk.iqr.Z' at index: 206 2020-04-07 08:13:13.742071
+dropping 'fBodyAccMag.mad' at index: 262 2020-04-07 08:14:29.650880
+dropping 'fBodyGyro.bandsEnergy.1.8.1' at index: 257 2020-04-07 08:15:43.759697
+dropping 'fBodyGyro.bandsEnergy.9.16.2' at index: 258 2020-04-07 08:16:57.756342
+dropping 'fBodyAccJerk.bandsEnergy.49.56' at index: 221 2020-04-07 08:18:10.427138
+dropping 'fBodyAccJerk.max.X' at index: 199 2020-04-07 08:19:22.815722
+dropping 'fBodyGyro.bandsEnergy.17.24.2' at index: 256 2020-04-07 08:20:33.881399
+dropping 'tBodyAccJerkMag.entropy' at index: 148 2020-04-07 08:21:44.988366
+dropping 'fBodyGyro.bandsEnergy.17.24' at index: 253 2020-04-07 08:22:54.306499
+dropping 'tBodyGyroJerk.iqr.Y' at index: 118 2020-04-07 08:24:04.185657
+dropping 'fBodyGyro.bandsEnergy.9.16' at index: 251 2020-04-07 08:25:12.970980
+dropping 'fBodyAccJerk.bandsEnergy.49.56.1' at index: 221 2020-04-07 08:26:21.425899
+dropping 'fBodyAcc.bandsEnergy.41.48.2' at index: 195 2020-04-07 08:27:28.088755
+dropping 'fBodyAccJerk.kurtosis.Z' at index: 215 2020-04-07 08:28:35.232832
+dropping 'tBodyAcc.arCoeff.Z.2' at index: 25 2020-04-07 08:29:41.135854
+dropping 'tBodyGyroMag.max' at index: 149 2020-04-07 08:30:46.997219
+dropping 'tBodyAcc.arCoeff.Y.2' at index: 21 2020-04-07 08:31:51.112495
+dropping 'fBodyGyro.bandsEnergy.49.56.2' at index: 246 2020-04-07 08:32:55.797662
+dropping 'fBodyAcc.bandsEnergy.33.40' at index: 186 2020-04-07 08:33:59.389444
+dropping 'tBodyGyroJerk.min.Y' at index: 113 2020-04-07 08:35:03.450812
+dropping 'fBodyBodyAccJerkMag.entropy' at index: 255 2020-04-07 08:36:05.322058
+dropping 'fBodyGyro.max.Z' at index: 221 2020-04-07 08:37:07.335005
+dropping 'tBodyAccJerk.max.Z' at index: 54 2020-04-07 08:38:08.092531
+dropping 'fBodyAccMag.max' at index: 242 2020-04-07 08:39:08.902900
+dropping 'fBodyAccJerk.bandsEnergy.1.8.2' at index: 214 2020-04-07 08:40:08.365638
+dropping 'tBodyAccJerkMag.iqr' at index: 142 2020-04-07 08:41:08.276740
+dropping 'fBodyAcc.kurtosis.Y' at index: 177 2020-04-07 08:42:06.970794
+dropping 'tBodyAccJerk.iqr.Z' at index: 59 2020-04-07 08:43:05.577395
+dropping 'tBodyGyro.min.Y' at index: 84 2020-04-07 08:44:02.555329
+dropping 'fBodyAccJerk.bandsEnergy.57.64.1' at index: 209 2020-04-07 08:45:00.134982
+dropping 'fBodyAccJerk.entropy.X' at index: 192 2020-04-07 08:45:57.075906
+dropping 'fBodyAccJerk.iqr.Y' at index: 191 2020-04-07 08:46:53.901298
+dropping 'fBodyGyro.max.X' at index: 210 2020-04-07 08:47:49.147678
+dropping 'fBodyGyro.bandsEnergy.49.56.1' at index: 232 2020-04-07 08:48:44.530979
+dropping 'angle.Y.gravityMean' at index: 265 2020-04-07 08:49:38.843820
+dropping 'tBodyAccJerkMag.max' at index: 138 2020-04-07 08:50:33.592015
+dropping 'fBodyBodyGyroJerkMag.iqr' at index: 254 2020-04-07 08:51:26.342204
+dropping 'tGravityAcc.arCoeff.X.4' at index: 41 2020-04-07 08:52:19.709514
+dropping 'tBodyGyroJerk.iqr.Z' at index: 111 2020-04-07 08:53:11.983400
+dropping 'fBodyAccJerk.bandsEnergy.9.16.2' at index: 204 2020-04-07 08:54:04.463081
+dropping 'tBodyGyro.arCoeff.Z.1' at index: 96 2020-04-07 08:54:55.503041
+dropping 'fBodyAccJerk.entropy.Z' at index: 188 2020-04-07 08:55:47.375310
+dropping 'tGravityAcc.arCoeff.Z.4' at index: 44 2020-04-07 08:56:38.000684
+dropping 'fBodyAcc.bandsEnergy.9.16' at index: 172 2020-04-07 08:57:28.459887
+dropping 'fBodyAccJerk.bandsEnergy.57.64.2' at index: 201 2020-04-07 08:58:17.488179
+dropping 'tBodyGyro.arCoeff.X.2' at index: 89 2020-04-07 08:59:06.175756
+dropping 'fBodyAcc.kurtosis.X' at index: 167 2020-04-07 08:59:54.212233
+dropping 'tGravityAccMag.max' at index: 126 2020-04-07 09:00:42.025408
+dropping 'fBodyAccMag.kurtosis' at index: 226 2020-04-07 09:01:28.820539
+dropping 'tBodyGyroJerk.max.Y' at index: 103 2020-04-07 09:02:15.222707
+dropping 'tGravityAcc.max.Z' at index: 31 2020-04-07 09:03:00.776466
+dropping 'fBodyAccJerk.kurtosis.X' at index: 188 2020-04-07 09:03:45.844676
+dropping 'fBodyBodyAccJerkMag.max' at index: 223 2020-04-07 09:04:29.765511
+dropping 'tBodyGyroJerk.min.Z' at index: 104 2020-04-07 09:05:13.663621
+dropping 'fBodyAccJerk.entropy.Y' at index: 179 2020-04-07 09:05:57.370518
+dropping 'fBodyAcc.kurtosis.Z' at index: 165 2020-04-07 09:06:40.619442
+dropping 'tBodyGyroJerkMag.entropy' at index: 140 2020-04-07 09:07:22.910458
+dropping 'fBodyAccJerk.max.Y' at index: 172 2020-04-07 09:08:04.942631
+dropping 'tBodyGyro.arCoeff.Y.1' at index: 90 2020-04-07 09:08:46.474056
+dropping 'fBodyAccJerk.bandsEnergy.41.48' at index: 184 2020-04-07 09:09:27.516352
+dropping 'fBodyGyro.kurtosis.Z' at index: 209 2020-04-07 09:10:07.600387
+dropping 'fBodyGyro.max.Y' at index: 188 2020-04-07 09:10:47.472772
+dropping 'tBodyAcc.iqr.X' at index: 11 2020-04-07 09:11:27.365322
+dropping 'tBodyAcc.arCoeff.Y.3' at index: 20 2020-04-07 09:12:06.419284
+dropping 'fBodyAccJerk.bandsEnergy.49.56.2' at index: 185 2020-04-07 09:12:44.866928
+dropping 'fBodyAccMag.entropy' at index: 207 2020-04-07 09:13:23.036767
+dropping 'fBodyAcc.bandsEnergy.57.64.2' at index: 168 2020-04-07 09:14:00.932471
+dropping 'fBodyAcc.bandsEnergy.25.32.1' at index: 165 2020-04-07 09:14:38.254548
+dropping 'tBodyGyroJerk.iqr.X' at index: 101 2020-04-07 09:15:14.586757
+dropping 'tBodyAcc.arCoeff.X.2' at index: 16 2020-04-07 09:15:51.062337
+dropping 'fBodyBodyGyroMag.kurtosis' at index: 219 2020-04-07 09:16:27.365806
+dropping 'fBodyAcc.bandsEnergy.33.40.1' at index: 163 2020-04-07 09:17:03.063883
+dropping 'fBodyAcc.iqr.Z' at index: 146 2020-04-07 09:17:38.044233
+dropping 'fBodyAcc.bandsEnergy.57.64' at index: 160 2020-04-07 09:18:13.074463
+dropping 'tGravityAcc.max.X' at index: 26 2020-04-07 09:18:47.532219
+dropping 'fBodyBodyGyroJerkMag.entropy' at index: 216 2020-04-07 09:19:21.725054
+dropping 'tGravityAcc.min.Z' at index: 28 2020-04-07 09:19:55.108485
+dropping 'tBodyAccJerk.max.Y' at index: 45 2020-04-07 09:20:28.518090
+dropping 'fBodyGyro.min.X' at index: 175 2020-04-07 09:21:01.501930
+dropping 'fBodyGyro.kurtosis.X' at index: 190 2020-04-07 09:21:34.163147
+dropping 'tGravityAcc.max.Y' at index: 26 2020-04-07 09:22:05.862558
+dropping 'fBodyBodyGyroJerkMag.kurtosis' at index: 214 2020-04-07 09:22:37.756049
+dropping 'fBodyGyro.iqr.Y' at index: 177 2020-04-07 09:23:09.002239
+dropping 'fBodyAcc.bandsEnergy.25.32' at index: 155 2020-04-07 09:23:39.944652
+dropping 'tGravityAccMag.entropy' at index: 116 2020-04-07 09:24:09.617082
+dropping 'tBodyAccJerk.iqr.Y' at index: 48 2020-04-07 09:24:39.777805
+dropping 'fBodyBodyAccJerkMag.kurtosis' at index: 198 2020-04-07 09:25:09.415897
+dropping 'tBodyAccJerk.arCoeff.Z.1' at index: 59 2020-04-07 09:25:38.910079
+dropping 'fBodyGyro.kurtosis.Y' at index: 185 2020-04-07 09:26:07.566348
+dropping 'tGravityAccMag.iqr' at index: 113 2020-04-07 09:26:36.506586
+dropping 'fBodyAcc.max.Y' at index: 131 2020-04-07 09:27:04.961197
+dropping 'tBodyGyro.max.Y' at index: 69 2020-04-07 09:27:33.098317
+dropping 'fBodyAcc.entropy.X' at index: 136 2020-04-07 09:28:00.212848
+dropping 'fBodyBodyAccJerkMag.iqr' at index: 188 2020-04-07 09:28:27.844576
+dropping 'fBodyAccJerk.iqr.X' at index: 153 2020-04-07 09:28:54.956396
+dropping 'fBodyAcc.bandsEnergy.9.16.1' at index: 148 2020-04-07 09:29:21.631482
+dropping 'tBodyGyroJerk.max.X' at index: 90 2020-04-07 09:29:47.747045
+dropping 'fBodyAcc.bandsEnergy.17.24' at index: 146 2020-04-07 09:30:13.976247
+dropping 'tBodyGyroJerk.max.Z' at index: 90 2020-04-07 09:30:39.710907
+dropping 'tBodyAccJerk.min.Z' at index: 46 2020-04-07 09:31:05.377982
+dropping 'fBodyAcc.min.Z' at index: 130 2020-04-07 09:31:29.762240
+dropping 'tBodyGyro.min.X' at index: 69 2020-04-07 09:31:54.756478
+dropping 'fBodyBodyGyroMag.entropy' at index: 186 2020-04-07 09:32:19.049621
+dropping 'tBodyAccJerk.arCoeff.Y.1' at index: 54 2020-04-07 09:32:43.235965
+dropping 'fBodyAcc.max.X' at index: 124 2020-04-07 09:33:06.592884
+dropping 'fBodyAcc.entropy.Y' at index: 129 2020-04-07 09:33:30.128803
+dropping 'fBodyAccMag.iqr' at index: 172 2020-04-07 09:33:53.170173
+dropping 'fBodyBodyGyroMag.max' at index: 179 2020-04-07 09:34:16.197080
+dropping 'fBodyAccJerk.bandsEnergy.41.48.1' at index: 154 2020-04-07 09:34:38.226952
+dropping 'fBodyGyro.min.Z' at index: 155 2020-04-07 09:35:00.083324
+Remaining variables:
+Index(['rn', 'activity', 'tBodyAcc.mean.X', 'tBodyAcc.mean.Y',
+       'tBodyAcc.mean.Z', 'tBodyAcc.max.X', 'tBodyAcc.max.Y', 'tBodyAcc.max.Z',
+       'tBodyAcc.min.X', 'tBodyAcc.min.Y',
+       ...
+       'fBodyBodyGyroMag.skewness', 'fBodyBodyGyroJerkMag.min',
+       'fBodyBodyGyroJerkMag.maxInds', 'fBodyBodyGyroJerkMag.meanFreq',
+       'fBodyBodyGyroJerkMag.skewness', 'angle.tBodyAccMean.gravity',
+       'angle.tBodyAccJerkMean.gravityMean', 'angle.tBodyGyroMean.gravityMean',
+       'angle.tBodyGyroJerkMean.gravityMean', 'angle.Z.gravityMean'],
+      dtype='object', length=191)
+0 Estimator 12   2020-04-07 09:35:21.474090
+1 Estimator 12   2020-04-07 09:35:48.833366
+2 Estimator 12   2020-04-07 09:35:51.132309
+3 Estimator 12   2020-04-07 09:35:51.429509
+4 Estimator 12   2020-04-07 09:35:51.585011
+5 Estimator 12   2020-04-07 09:35:52.157856
+6 Estimator 12   2020-04-07 09:35:53.302432
+7 Estimator 12   2020-04-07 09:36:04.902879
+8 Estimator 12   2020-04-07 09:36:14.099711
+9 Estimator 12   2020-04-07 09:36:14.377912
+10 Estimator 12   2020-04-07 09:37:01.918019
+11 Estimator 12   2020-04-07 09:37:58.512919
+2  FS from  4   2020-04-07 09:37:59.479693
+0 Estimator 12   2020-04-07 09:38:01.865637
+1 Estimator 12   2020-04-07 09:38:33.852266
+2 Estimator 12   2020-04-07 09:38:36.615254
+3 Estimator 12   2020-04-07 09:38:36.932285
+4 Estimator 12   2020-04-07 09:38:37.131307
+5 Estimator 12   2020-04-07 09:38:37.861683
+6 Estimator 12   2020-04-07 09:38:39.554967
+7 Estimator 12   2020-04-07 09:38:57.764570
+8 Estimator 12   2020-04-07 09:39:10.453974
+9 Estimator 12   2020-04-07 09:39:10.728829
+10 Estimator 12   2020-04-07 09:40:15.475805
+11 Estimator 12   2020-04-07 09:41:30.767087
+3  FS from  4   2020-04-07 09:41:32.415213
+0 Estimator 12   2020-04-07 09:41:32.415306
+1 Estimator 12   2020-04-07 09:42:38.207426
+2 Estimator 12   2020-04-07 09:42:43.987310
+3 Estimator 12   2020-04-07 09:42:44.361934
+4 Estimator 12   2020-04-07 09:42:44.773779
+5 Estimator 12   2020-04-07 09:42:46.462126
+/home/varga_jozef229/anaconda3/lib/python3.7/site-packages/sklearn/discriminant_analysis.py:388: UserWarning: Variables are collinear.
+  warnings.warn("Variables are collinear.")
+/home/varga_jozef229/anaconda3/lib/python3.7/site-packages/sklearn/discriminant_analysis.py:388: UserWarning: Variables are collinear.
+  warnings.warn("Variables are collinear.")
+/home/varga_jozef229/anaconda3/lib/python3.7/site-packages/sklearn/discriminant_analysis.py:388: UserWarning: Variables are collinear.
+  warnings.warn("Variables are collinear.")
+/home/varga_jozef229/anaconda3/lib/python3.7/site-packages/sklearn/discriminant_analysis.py:388: UserWarning: Variables are collinear.
+  warnings.warn("Variables are collinear.")
+/home/varga_jozef229/anaconda3/lib/python3.7/site-packages/sklearn/discriminant_analysis.py:388: UserWarning: Variables are collinear.
+  warnings.warn("Variables are collinear.")
+/home/varga_jozef229/anaconda3/lib/python3.7/site-packages/sklearn/discriminant_analysis.py:388: UserWarning: Variables are collinear.
+  warnings.warn("Variables are collinear.")
+/home/varga_jozef229/anaconda3/lib/python3.7/site-packages/sklearn/discriminant_analysis.py:388: UserWarning: Variables are collinear.
+  warnings.warn("Variables are collinear.")
+/home/varga_jozef229/anaconda3/lib/python3.7/site-packages/sklearn/discriminant_analysis.py:388: UserWarning: Variables are collinear.
+  warnings.warn("Variables are collinear.")
+/home/varga_jozef229/anaconda3/lib/python3.7/site-packages/sklearn/discriminant_analysis.py:388: UserWarning: Variables are collinear.
+  warnings.warn("Variables are collinear.")
+/home/varga_jozef229/anaconda3/lib/python3.7/site-packages/sklearn/discriminant_analysis.py:388: UserWarning: Variables are collinear.
+  warnings.warn("Variables are collinear.")
+6 Estimator 12   2020-04-07 09:42:52.733973
+7 Estimator 12   2020-04-07 09:43:15.880431
+8 Estimator 12   2020-04-07 09:43:39.651268
+9 Estimator 12   2020-04-07 09:43:39.997026
+10 Estimator 12   2020-04-07 09:46:07.272126
+11 Estimator 12   2020-04-07 09:48:51.360374
+/home/varga_jozef229/anaconda3/lib/python3.7/site-packages/sklearn/discriminant_analysis.py:692: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+/home/varga_jozef229/anaconda3/lib/python3.7/site-packages/sklearn/discriminant_analysis.py:692: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+/home/varga_jozef229/anaconda3/lib/python3.7/site-packages/sklearn/discriminant_analysis.py:692: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+/home/varga_jozef229/anaconda3/lib/python3.7/site-packages/sklearn/discriminant_analysis.py:692: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+/home/varga_jozef229/anaconda3/lib/python3.7/site-packages/sklearn/discriminant_analysis.py:692: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+/home/varga_jozef229/anaconda3/lib/python3.7/site-packages/sklearn/discriminant_analysis.py:692: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+/home/varga_jozef229/anaconda3/lib/python3.7/site-packages/sklearn/discriminant_analysis.py:692: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+/home/varga_jozef229/anaconda3/lib/python3.7/site-packages/sklearn/discriminant_analysis.py:692: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+/home/varga_jozef229/anaconda3/lib/python3.7/site-packages/sklearn/discriminant_analysis.py:692: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+/home/varga_jozef229/anaconda3/lib/python3.7/site-packages/sklearn/discriminant_analysis.py:692: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+/home/varga_jozef229/anaconda3/lib/python3.7/site-packages/sklearn/discriminant_analysis.py:692: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+/home/varga_jozef229/anaconda3/lib/python3.7/site-packages/sklearn/discriminant_analysis.py:692: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+/home/varga_jozef229/anaconda3/lib/python3.7/site-packages/sklearn/discriminant_analysis.py:692: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+/home/varga_jozef229/anaconda3/lib/python3.7/site-packages/sklearn/discriminant_analysis.py:692: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+/home/varga_jozef229/anaconda3/lib/python3.7/site-packages/sklearn/discriminant_analysis.py:692: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+/home/varga_jozef229/anaconda3/lib/python3.7/site-packages/sklearn/discriminant_analysis.py:692: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+/home/varga_jozef229/anaconda3/lib/python3.7/site-packages/sklearn/discriminant_analysis.py:692: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+/home/varga_jozef229/anaconda3/lib/python3.7/site-packages/sklearn/discriminant_analysis.py:692: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+/home/varga_jozef229/anaconda3/lib/python3.7/site-packages/sklearn/discriminant_analysis.py:692: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+/home/varga_jozef229/anaconda3/lib/python3.7/site-packages/sklearn/discriminant_analysis.py:692: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+/home/varga_jozef229/anaconda3/lib/python3.7/site-packages/sklearn/discriminant_analysis.py:692: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+/home/varga_jozef229/anaconda3/lib/python3.7/site-packages/sklearn/discriminant_analysis.py:692: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+/home/varga_jozef229/anaconda3/lib/python3.7/site-packages/sklearn/discriminant_analysis.py:692: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+/home/varga_jozef229/anaconda3/lib/python3.7/site-packages/sklearn/discriminant_analysis.py:692: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+/home/varga_jozef229/anaconda3/lib/python3.7/site-packages/sklearn/discriminant_analysis.py:692: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+/home/varga_jozef229/anaconda3/lib/python3.7/site-packages/sklearn/discriminant_analysis.py:692: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+/home/varga_jozef229/anaconda3/lib/python3.7/site-packages/sklearn/discriminant_analysis.py:692: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+/home/varga_jozef229/anaconda3/lib/python3.7/site-packages/sklearn/discriminant_analysis.py:692: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+/home/varga_jozef229/anaconda3/lib/python3.7/site-packages/sklearn/discriminant_analysis.py:692: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+/home/varga_jozef229/anaconda3/lib/python3.7/site-packages/sklearn/discriminant_analysis.py:692: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+/home/varga_jozef229/anaconda3/lib/python3.7/site-packages/sklearn/discriminant_analysis.py:692: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+/home/varga_jozef229/anaconda3/lib/python3.7/site-packages/sklearn/discriminant_analysis.py:692: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+/home/varga_jozef229/anaconda3/lib/python3.7/site-packages/sklearn/discriminant_analysis.py:692: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+/home/varga_jozef229/anaconda3/lib/python3.7/site-packages/sklearn/discriminant_analysis.py:692: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+/home/varga_jozef229/anaconda3/lib/python3.7/site-packages/sklearn/discriminant_analysis.py:692: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+/home/varga_jozef229/anaconda3/lib/python3.7/site-packages/sklearn/discriminant_analysis.py:692: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+/home/varga_jozef229/anaconda3/lib/python3.7/site-packages/sklearn/discriminant_analysis.py:692: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+/home/varga_jozef229/anaconda3/lib/python3.7/site-packages/sklearn/discriminant_analysis.py:692: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+/home/varga_jozef229/anaconda3/lib/python3.7/site-packages/sklearn/discriminant_analysis.py:692: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+/home/varga_jozef229/anaconda3/lib/python3.7/site-packages/sklearn/discriminant_analysis.py:692: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+/home/varga_jozef229/anaconda3/lib/python3.7/site-packages/sklearn/discriminant_analysis.py:692: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+/home/varga_jozef229/anaconda3/lib/python3.7/site-packages/sklearn/discriminant_analysis.py:692: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+/home/varga_jozef229/anaconda3/lib/python3.7/site-packages/sklearn/discriminant_analysis.py:692: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+/home/varga_jozef229/anaconda3/lib/python3.7/site-packages/sklearn/discriminant_analysis.py:692: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+/home/varga_jozef229/anaconda3/lib/python3.7/site-packages/sklearn/discriminant_analysis.py:692: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+/home/varga_jozef229/anaconda3/lib/python3.7/site-packages/sklearn/discriminant_analysis.py:692: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+/home/varga_jozef229/anaconda3/lib/python3.7/site-packages/sklearn/discriminant_analysis.py:692: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+/home/varga_jozef229/anaconda3/lib/python3.7/site-packages/sklearn/discriminant_analysis.py:692: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+/home/varga_jozef229/anaconda3/lib/python3.7/site-packages/sklearn/discriminant_analysis.py:692: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+/home/varga_jozef229/anaconda3/lib/python3.7/site-packages/sklearn/discriminant_analysis.py:692: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+/home/varga_jozef229/anaconda3/lib/python3.7/site-packages/sklearn/discriminant_analysis.py:692: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+/home/varga_jozef229/anaconda3/lib/python3.7/site-packages/sklearn/discriminant_analysis.py:692: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+/home/varga_jozef229/anaconda3/lib/python3.7/site-packages/sklearn/discriminant_analysis.py:692: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+/home/varga_jozef229/anaconda3/lib/python3.7/site-packages/sklearn/discriminant_analysis.py:692: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+/home/varga_jozef229/anaconda3/lib/python3.7/site-packages/sklearn/discriminant_analysis.py:692: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+/home/varga_jozef229/anaconda3/lib/python3.7/site-packages/sklearn/discriminant_analysis.py:692: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+/home/varga_jozef229/anaconda3/lib/python3.7/site-packages/sklearn/discriminant_analysis.py:692: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+/home/varga_jozef229/anaconda3/lib/python3.7/site-packages/sklearn/discriminant_analysis.py:692: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+/home/varga_jozef229/anaconda3/lib/python3.7/site-packages/sklearn/discriminant_analysis.py:692: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+/home/varga_jozef229/anaconda3/lib/python3.7/site-packages/sklearn/discriminant_analysis.py:692: UserWarning: Variables are collinear
+  warnings.warn("Variables are collinear")
+Finish
