@@ -71,6 +71,7 @@ estimatorFunction = [
     ExtraTreesClassifier(n_estimators=5, criterion="entropy", max_features=2),
     GaussianNB(),
     KNeighborsClassifier(n_neighbors=10),
+    LinearDiscriminantAnalysis(),
     LogisticRegression(
         penalty="l1", dual=False, max_iter=110, solver="liblinear", multi_class="auto"
     ),
@@ -88,6 +89,7 @@ estimatorNames = [
     "Extra Trees",
     "Naive Bayes",
     "Nearest Neighbors",
+    "Linear Discriminant Analysis",
     "Logistic Regression",
     "Neural Net",
     "Random Forest",
@@ -234,41 +236,23 @@ for featureSelection in range(len(featureSelectionName)):
         df_data = corrSelectFeatures(df_data)
     if featureSelection == 1:
         df_data = vifSelectFeatures(df_data)
-    # if featureSelection == 0:
-    #     df_data = gaSelectFeatures(
-    #         model,
-    #         df_data,
-    #         X,
-    #         y,
-    #         count_of_populations,
-    #         count_of_generations,
-    #         count_of_children_to_crossover,
-    #         count_of_best_chromosome_to_select,
-    #         count_of_random_chromosome_to_select,
-    #         chance_of_chromosome_mutation,
-    #         main_value_of_dataset
-    #     )
+    if featureSelection == 0:
+        df_data = gaSelectFeatures(
+            model,
+            df_data,
+            X,
+            y,
+            count_of_populations,
+            count_of_generations,
+            count_of_children_to_crossover,
+            count_of_best_chromosome_to_select,
+            count_of_random_chromosome_to_select,
+            chance_of_chromosome_mutation,
+            main_value_of_dataset
+        )
     done = time.time()
     elapsed = done - start
     for estimator in range(len(estimatorNames)):
-        if featureSelection == 0:
-            start = time.time()
-            df_data = test_dataframe.copy()
-            df_data = gaSelectFeatures(
-                estimatorFunction[estimator],
-                df_data,
-                X,
-                y,
-                count_of_populations,
-                count_of_generations,
-                count_of_children_to_crossover,
-                count_of_best_chromosome_to_select,
-                count_of_random_chromosome_to_select,
-                chance_of_chromosome_mutation,
-                main_value_of_dataset
-            )
-            done = time.time()
-            elapsed = done - start
         print(str(estimator), "Estimator", len(
             estimatorNames), " ", datetime.datetime.now())
         df_test = df_data.copy()
@@ -289,7 +273,6 @@ for featureSelection in range(len(featureSelectionName)):
 df_stats_model.to_csv(r'columns_stats_model.csv', index=False, header=True)
 cm = sns.light_palette("green", as_cmap=True)
 styled = df_stats_model.style.background_gradient(cmap=cm)
-styled.to_excel('styled_model_finish_behavioral_more_ga.xlsx',
-                engine='openpyxl')
+styled.to_excel('styled_model_finish_behavioral.xlsx', engine='openpyxl')
 print("Finish")
 # %%
